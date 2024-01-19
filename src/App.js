@@ -5,7 +5,7 @@ import CreateAccount from './Components/CreateAccount/CreateAccount';
 
 const App = () => {
   return (
-    <div>
+    <div className='mm'>
       <CreateAccount/>
     </div>
   );
