@@ -50,5 +50,6 @@ const CreateAccount = () => {
    </div>
   )
 }
+// component
 
 export default CreateAccount
