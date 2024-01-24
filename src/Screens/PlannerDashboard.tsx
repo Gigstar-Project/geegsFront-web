@@ -4,10 +4,14 @@ import {useState} from "react";
 import AppLogo from '../Logo/GeegStarLogo.png';
 // @ts-ignore
 import Logo from '../Logo/burnaaa2 1.png'
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 // @ts-ignore
 import talent1 from '../Logo/Rectangle 17.png'
+// @ts-ignore
+import talent2 from '../Logo/davido.png'
+// @ts-ignore
+import talent3 from '../Logo/burna.png'
+// @ts-ignore
+import talent4 from '../Logo/Bovi.png'
 interface CardProps {
     imageSrc: string;
     altText: string;
@@ -16,41 +20,410 @@ interface CardProps {
     buttonText: string;
     onClick: () => void;
 }
-const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title, description, buttonText, onClick})=> {
+const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,description,
+                                                  buttonText, onClick})=> {
 
+    const [ShowAll, setShowMore] = useState(false);
 
-
-
-        return (
-            <div style={{
-                backgroundColor: 'black', minHeight: '100vh', display: 'flex',
-                flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'white'
-            }}>
-                <div>
-                    <img src={AppLogo} alt="App Logo" style={{
-                        width: '200px', height: '100px', position: 'absolute',
-                        top: '10px', left: '50px'
-                    }}/>
-                </div>
-                <div>
-                    <img src={Logo} alt={Logo}
-                         style={{width: '100%', height: '100%', position: 'relative', top: '-120px'}}/>
-                </div>
-                <div>
-                    <p style={{textAlign: 'left', top: '10px', left: '50px'}}> Talents </p>
-                </div>
-                <div className="card">
-
-                    <div className="card-text">
-                    </div>
-                    <img src={talent1} alt={talent1}/>
-                </div>
-                        <h2>BasketMouth</h2>
-                        <p>BasketMouth is one of the leading comedian in Nigeria that has served the country for over 20 years.</p>
-                        <button onClick={onClick}>{buttonText}</button>
-
-            </div>
-        )
+    const toggleText = () => {
+        setShowMore(!ShowAll);
     };
+
+
+    return (
+        <div style={{
+            backgroundColor: 'black',
+            minHeight: '100vh',
+            maxWidth:'100%',
+            display: 'grid',
+            justifyContent: 'center',
+            color: 'white',
+        }}>
+            <img src={AppLogo} alt="App Logo" style={{
+                width: '200px',
+                height: '100px',
+                top: '10px',
+                left: '50px'
+            }}/>
+            <img src={Logo} alt={Logo} style={{
+                width: '100%',
+                height: '100%',
+                top: '120em'
+            }}/>
+            <p style={{
+                fontSize: '50px',
+                top: '10px'
+            }}> Talents </p>
+
+            <div onClick={toggleText} style={{
+                cursor: 'pointer',
+                color: 'white',
+                textDecoration: 'underline',
+                top: '30em',right:'50px',
+                alignSelf: 'flex-end',
+                marginTop: '10px'
+            }}>
+                {ShowAll  ? 'Show Less' : 'Show All'}
+            </div>
+            <div className="card1" style={{
+                display: "flex",
+                flexDirection: 'row',
+                marginLeft:'80px',
+                marginRight: '80px'
+            }}>
+                <div style={{
+                    width: '40%',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center",
+                    marginRight: '30px'
+                }}>
+                <div className="card-text" style={{
+                    marginTop:'20px',
+                    marginLeft:'30px'
+                }}>
+                    <img src={talent1} alt={talent1}/>
+                    <div style={{ display: 'flex',flexDirection:'row'}}>
+                        <h2>BasketMouth</h2>  <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                    </div>
+                    <p>BasketMouth is one of the leading comedian
+                        in Nigeria that has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+                <div style={{
+                    width: '40%',
+                    marginRight:'30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center"
+                }}>
+                <div className="card-text" style={{
+                    marginTop:'20px',
+                    marginLeft:'30px'
+                }}>
+                    <img src={talent2} alt={talent2}/>
+                    <h2>Davido</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                    <p>Davido is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+                <div style={{
+                    width: '40%',
+                    marginRight:'30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center"
+                }}>
+                <div className="card-text" style={{
+                    marginTop:'20px',
+                    marginLeft:'30px'
+                }}>
+                    <img src={talent3} alt={talent3}/>
+                    <h2>Burna Boy</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                    <p>Burna Boy is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+                <div style={{
+                    width: '40%',
+                    marginRight:'30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center"
+                }}>
+                <div className="card-text" style={{
+                    marginTop:'20px',
+                    marginLeft:'30px'
+                }}>
+                    <img src={talent4} alt={talent4}/>
+                    <h2>Bovi</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                    <p>Bovi is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+            </div>
+            <div className="cards" style={{
+                display: "flex",
+                marginLeft:'80px',
+                marginRight: '80px',
+                marginTop:'40px'
+            }}>
+                <div style={{
+                    width: '40%',
+                    marginRight:'30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center"
+                }}>
+                <div className="card-text" style={{
+                    marginTop:'20px',
+                    marginLeft:'30px'
+                }}>
+
+                    <img src={talent1} alt={talent1}/>
+                    <h2>BasketMouth</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                    <p>BasketMouth is one of the leading comedian
+                        in Nigeria that has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+                <div style={{
+                    width: '40%',
+                    marginRight:'30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center"
+                }}>
+                <div className="card-text" style={{marginTop:'20px',marginLeft:'30px'}}>
+
+                    <img src={talent2} alt={talent2}/>
+                    <h2>Davido</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                    <p>Davido is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+                <div style={{
+                    width: '40%',
+                    marginRight:'30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center"
+                }}>
+                <div className="card-text" style={{marginTop:'20px',marginLeft:'30px'}}>
+
+                    <img src={talent3} alt={talent3}/>
+                    <h2>Burna Boy</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                    <p>Burna Boy is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+                <div style={{
+                    width: '40%',
+                    marginRight:'30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems:"center"
+                }}>
+                <div className="card-text" style={{marginTop:'20px',marginLeft:'30px'}}>
+
+                    <img src={talent4} alt={talent4}/>
+                    <h2>Bovi</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                    <p>Bovi is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Talents</button>
+                </div>
+                </div>
+            </div>
+            <p style={{fontSize: '50px'}}> Manage Bookings </p>
+            <div style={{marginLeft: '50px'}}>
+                <div style={{
+                    backgroundColor: '#153818',
+                    minHeight: '50vh',
+                    justifyContent: 'center',
+                    color: 'white',
+                    borderRadius:'50px',
+                    width:'100em',
+
+
+                    alignItems:'center'
+                }}>
+                    <div style={{marginLeft: '50px'}}>
+                    <p style={{fontSize: '50px', top: '10px'}}> Accepted Bookings </p>
+
+                    <div onClick={toggleText} style={{
+                        cursor: 'pointer',
+                        color: 'white',
+                        textDecoration: 'underline',
+                        right:'50px',
+                        marginRight: '2px'
+                    }}>
+                        {ShowAll  ? 'Show Less' : 'Show All'}
+                    </div>
+                    <div className="card-text">
+
+                        <img src={talent4} alt={talent4}/>
+                        <h2>Bovi</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                        <p>Bovi is one of the leading comedian in Nigeria that
+                            has served the country for over 20 years.</p>
+                        <button onClick={onClick} style={{
+                            width: '100px',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10
+                        }}>View Bookings Details</button>
+                        <button onClick={onClick} style={{
+                            width: '100px',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10
+                        }}>Make Payment</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style={{
+                backgroundColor: 'rgba(255, 0, 0, 0.30)',
+                minHeight: '50vh',
+                justifyContent: 'center',
+                marginTop:'100px',
+                marginLeft:'50px',
+                color: 'white',
+                borderRadius:'50px',
+                width:'100em',
+
+            }}>
+                <p style={{fontSize: '50px', top: '10px'}}> Declined Bookings </p>
+                <div onClick={toggleText} style={{
+                    cursor: 'pointer',
+                    color: 'white',
+                    textDecoration: 'underline',
+                    top: '30em',
+                    right:'50px',
+                    alignSelf: 'flex-end',
+                    marginTop: '10px'
+                }}>
+                    {ShowAll  ? 'Show Less' : 'Show All'}
+                </div>
+                <div style={{}}>
+                    <div className="card-text" >
+
+                        <img src={talent1} alt={talent1}/>
+                        <h2>BasketMouth</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                        <p>BasketMouth is one of the leading comedian
+                            in Nigeria that has served the country for over 20 years.</p>
+                        <button onClick={onClick} style={{
+                            width: '100px',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10
+                        }}>Book Again</button>
+                        <button onClick={onClick} style={{
+                            width: '100px',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10
+                        }}>Remove</button>
+
+                    </div>
+                    <img src={talent2} alt={talent2}/>
+                    <h2>Davido</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                    <p>Davido is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Book Again</button>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Remove</button>
+
+                </div>
+            </div>
+
+            <div style={{
+                backgroundColor: '#153818',
+                minHeight: '50vh',
+                justifyContent: 'center',
+                marginTop:'100px',
+                marginLeft: '50px',
+                color: 'white',
+                borderRadius:'50px',
+                width:'100em',
+
+            }}>
+                <p style={{
+                    fontSize: '50px',
+                    top: '10px'
+                }}> Accepted Bookings </p>
+                <div onClick={toggleText} style={{
+                    cursor: 'pointer',
+                    color: 'white',
+                    textDecoration: 'underline',
+                    top: '30em',
+                    right:'50px',
+                    alignSelf: 'flex-end',
+                    marginTop: '10px'
+                }}>
+                    {ShowAll  ? 'Show Less' : 'Show All'}
+                </div>
+                <div className="card-text">
+
+                    <img src={talent4} alt={talent4}/>
+                    <h2>Bovi</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                    <p>Bovi is one of the leading comedian in Nigeria that
+                        has served the country for over 20 years.</p>
+                    <button onClick={onClick} style={{
+                        width: '100px',
+                        height: '40px',
+                        background: 'white',
+                        borderRadius: 10
+                    }}>Withdraw Bookings </button>
+
+
+                </div>
+            </div>
+        </div>
+    )
+};
 
 export default PlannerDashboard;

@@ -9,8 +9,8 @@ import PlannerDashboard from "./Screens/PlannerDashboard.tsx";
 const App = () => {
     return (
         <div className="App">
-            <RegistrationScreen/>
-            {/*<PlannerDashboard/>*/}
+            {/*<RegistrationScreen/>*/}
+            <PlannerDashboard/>
             {/*<VerificationScreen />*/}
         </div>
     )

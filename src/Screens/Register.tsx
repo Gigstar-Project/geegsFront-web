@@ -38,46 +38,85 @@ const RegistrationScreen: React.FC = () => {
         }
     };
     return (
-        <div style={{ backgroundColor: 'black', minHeight: '100vh', display: 'flex',
-            flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <img src={AppLogo} alt="App Logo" style={{ width: '200px', height: '100px', position: 'absolute',
-                    top: '10px', left: '50px' }}  />
+        <div style={{
+            backgroundColor: 'black',
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white'
+        }}>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+            }}>
+                <img src={AppLogo} alt="App Logo" style={{
+                    width: '200px',
+                    height: '100px',
+                    position: 'absolute',
+                    top: '10px',
+                    left: '50px'
+                }}  />
                 <p style= {{fontSize: '50px'}}> Create Account </p>
                 <input
                     type="text"
                     placeholder="First Name"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    style={{ padding: '10px', margin: '20px', borderRadius: '4px', width: '500px' }}
+                    style={{
+                        padding: '10px',
+                        margin: '20px',
+                        borderRadius: '4px',
+                        width: '500px'
+                }}
                 />
                 <input
                     type="text"
                     placeholder="Last Name"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    style={{ padding: '10px', margin: '20px', borderRadius: '4px', width: '500px' }}
+                    style={{
+                        padding: '10px',
+                        margin: '20px',
+                        borderRadius: '4px',
+                        width: '500px'
+                }}
                 />
                 <input
                     type="text"
                     placeholder="Phone Number"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
-                    style={{ padding: '10px', margin: '20px', borderRadius: '4px', width: '500px' }}
-                />
+                    style={{
+                        padding: '10px',
+                        margin: '20px',
+                        borderRadius: '4px',
+                        width: '500px'
+                }}/>
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    style={{ padding: '10px', margin: '20px', borderRadius: '4px', width: '500px' }}
-                />
+                    style={{
+                        padding: '10px',
+                        margin: '20px',
+                        borderRadius: '4px',
+                        width: '500px'
+                }}/>
                 <input
                     type="text"
                     placeholder="Display Name"
                     value={displayName}
                     onChange={(e) => setDisplayName(e.target.value)}
-                    style={{ padding: '10px', margin: '20px', borderRadius: '4px', width: '500px' }}
+                    style={{
+                        padding: '10px',
+                        margin: '20px',
+                        borderRadius: '4px',
+                        width: '500px'
+                }}
                 />
                 <label>
                     <input
@@ -90,8 +129,16 @@ const RegistrationScreen: React.FC = () => {
             </div>
             <button
                 onClick={handleRegister}
-                style={{ padding: '10px', margin: '20px', cursor: 'pointer', backgroundColor: 'blue',
-                    color: 'white', borderRadius: '8px', transition: 'background-color 0.3s',width: '100px' }}
+                style={{
+                    padding: '10px',
+                    margin: '20px',
+                    cursor: 'pointer',
+                    backgroundColor: 'blue',
+                    color: 'white',
+                    borderRadius: '8px',
+                    transition: 'background-color 0.3s',
+                    width: '100px'
+            }}
             >
                 Register
             </button>
