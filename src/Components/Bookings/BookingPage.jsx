@@ -57,6 +57,11 @@ const BookingPage = () => {
             className="rbc-calendar"
           />
         </div>
+        <button className='confirm-button'>
+          <div className='button-text'>
+          Confirm
+          </div>
+        </button>
       </div>
       </div>
     </div>
