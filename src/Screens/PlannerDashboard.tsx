@@ -57,11 +57,18 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
 
             <div onClick={toggleText} style={{
                 cursor: 'pointer',
-                color: 'white',
+                color:'#BE9694',
                 textDecoration: 'underline',
-                top: '30em',right:'50px',
-                alignSelf: 'flex-end',
-                marginTop: '10px'
+                position: 'absolute',
+                right:'10px',
+                textAlign:'right',
+                marginLeft:'50px',
+                marginRight:'50px',
+                marginTop: '350px'
+
+
+
+
             }}>
                 {ShowAll  ? 'Show Less' : 'Show All'}
             </div>
@@ -85,7 +92,15 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
                 }}>
                     <img src={talent1} alt={talent1}/>
                     <div style={{ display: 'flex',flexDirection:'row'}}>
-                        <h2>BasketMouth</h2>  <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                        <h2>BasketMouth</h2>
+                        <h1 style={{
+                            color:'#BE9694',
+                            fontSize: 16,
+                            right:'10px',
+                            textAlign:'right',
+                            marginLeft:'80px',
+
+                        }}> Comedian</h1>
                     </div>
                     <p>BasketMouth is one of the leading comedian
                         in Nigeria that has served the country for over 20 years.</p>
@@ -110,7 +125,12 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
                     marginLeft:'30px'
                 }}>
                     <img src={talent2} alt={talent2}/>
-                    <h2>Davido</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                    <h2>Davido</h2>
+                    <h1 style={{
+                        color:'#BE9694',
+                        fontSize: 16,
+
+                    }}> Artist</h1>
                     <p>Davido is one of the leading comedian in Nigeria that
                         has served the country for over 20 years.</p>
                     <button onClick={onClick} style={{
@@ -169,6 +189,7 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
                     }}>Book Talents</button>
                 </div>
                 </div>
+
             </div>
             <div className="cards" style={{
                 display: "flex",
@@ -268,6 +289,20 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
                 </div>
                 </div>
             </div>
+            <div onClick={toggleText} style={{
+                cursor: 'pointer',
+                color:'#BE9694',
+                textDecoration: 'underline',
+                position: 'absolute',
+                left:'20',
+                textAlign:'left',
+                marginLeft:'50px',
+                marginRight:'50px',
+                marginTop: '1500px'
+
+            }}>
+                {ShowAll  ? 'Show Less' : 'Show All'}
+            </div>
             <p style={{fontSize: '50px'}}> Manage Bookings </p>
             <div style={{marginLeft: '50px'}}>
                 <div style={{
@@ -277,41 +312,46 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
                     color: 'white',
                     borderRadius:'50px',
                     width:'100em',
-
-
                     alignItems:'center'
                 }}>
-                    <div style={{marginLeft: '50px'}}>
-                    <p style={{fontSize: '50px', top: '10px'}}> Accepted Bookings </p>
+                    <div style={{marginLeft: '50px', display: 'flex', justifyContent: 'space-between'}}>
+                        <div>
+                            <p style={{fontSize: '50px', top: '10px'}}> Accepted Bookings </p>
+                            <div className="card-text">
+                                <img src={talent4} alt={talent4}/>
+                                <h2>Bovi</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
+                                <p>Bovi is one of the leading comedian in Nigeria that
+                                    has served the country for over 20 years.</p>
+                                <div style={{display:"flex",justifyContent:'space-between'}}>
+                                <button onClick={onClick} style={{
+                                    width: '100px',
+                                    height: '40px',
+                                    background: 'white',
+                                    borderRadius: 10,
+                                    marginLeft: '20px'
+                                }}>View Bookings Details</button>
+                                <button onClick={onClick} style={{
+                                    width: '100px',
+                                    height: '40px',
+                                    background: 'white',
+                                    borderRadius: 10
+                                }}>Make Payment</button>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div onClick={toggleText} style={{
-                        cursor: 'pointer',
-                        color: 'white',
-                        textDecoration: 'underline',
-                        right:'50px',
-                        marginRight: '2px'
-                    }}>
-                        {ShowAll  ? 'Show Less' : 'Show All'}
-                    </div>
-                    <div className="card-text">
+                        <div onClick={toggleText} style={{
+                            cursor: 'pointer',
+                            color: 'white',
+                            textDecoration: 'underline',
+                            marginLeft:'50px',
+                            marginRight:'50px',
+                            marginTop: '50px'
 
-                        <img src={talent4} alt={talent4}/>
-                        <h2>Bovi</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
-                        <p>Bovi is one of the leading comedian in Nigeria that
-                            has served the country for over 20 years.</p>
-                        <button onClick={onClick} style={{
-                            width: '100px',
-                            height: '40px',
-                            background: 'white',
-                            borderRadius: 10
-                        }}>View Bookings Details</button>
-                        <button onClick={onClick} style={{
-                            width: '100px',
-                            height: '40px',
-                            background: 'white',
-                            borderRadius: 10
-                        }}>Make Payment</button>
-                    </div>
+                        }}>
+                            {ShowAll  ? 'Show Less' : 'Show All'}
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -327,55 +367,66 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
                 width:'100em',
 
             }}>
-                <p style={{fontSize: '50px', top: '10px'}}> Declined Bookings </p>
-                <div onClick={toggleText} style={{
-                    cursor: 'pointer',
-                    color: 'white',
-                    textDecoration: 'underline',
-                    top: '30em',
-                    right:'50px',
-                    alignSelf: 'flex-end',
-                    marginTop: '10px'
-                }}>
-                    {ShowAll  ? 'Show Less' : 'Show All'}
-                </div>
-                <div style={{}}>
-                    <div className="card-text" >
+                <div style={{marginLeft: '50px', display: 'flex', justifyContent: 'space-between'}}>
+                      <div>
+                    <p style={{fontSize: '50px', top: '10px'}}> Declined Bookings </p>
 
-                        <img src={talent1} alt={talent1}/>
-                        <h2>BasketMouth</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
-                        <p>BasketMouth is one of the leading comedian
-                            in Nigeria that has served the country for over 20 years.</p>
-                        <button onClick={onClick} style={{
-                            width: '100px',
-                            height: '40px',
-                            background: 'white',
-                            borderRadius: 10
-                        }}>Book Again</button>
-                        <button onClick={onClick} style={{
-                            width: '100px',
-                            height: '40px',
-                            background: 'white',
-                            borderRadius: 10
-                        }}>Remove</button>
+                        <div className="card-text">
+                            <img src={talent3} alt={talent3}/>
+                            <h2>Burna Boy</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                            <p>With his supremacy catchy afro fusion and a new album,
+                                the Nigeria songwriter,singer and rapper make music as a true global citizen  .</p>
+                            <div style={{justifyContent:'space-between',display:'flex'}} >
 
+                            <button onClick={onClick} style={{
+                                width: '100px',
+                                height: '40px',
+                                background: 'white',
+                                borderRadius: 10,
+                            }}>Book again</button>
+
+
+                            <button onClick={onClick} style={{
+                                width: '100px',
+                                height: '40px',
+                                background: 'white',
+                                borderRadius: 10
+                            }}>Remove</button>
+
+                            </div>
+                        </div>
+            </div>
+                        {/*<div className="card-text">*/}
+                        {/*    <img src={talent1} alt={talent1}/>*/}
+                        {/*    <h2>Basket Mouth</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>*/}
+                        {/*    <p> Basket Mouth is one of the leading comedian in Nigeria that*/}
+                        {/*        has served the country for over 20 years .</p>*/}
+                        {/*    <button onClick={onClick} style={{*/}
+                        {/*        width: '100px',*/}
+                        {/*        height: '40px',*/}
+                        {/*        background: 'white',*/}
+                        {/*        borderRadius: 10*/}
+                        {/*    }}>Book again</button>*/}
+                        {/*    <button onClick={onClick} style={{*/}
+                        {/*        width: '100px',*/}
+                        {/*        height: '40px',*/}
+                        {/*        background: 'white',*/}
+                        {/*        borderRadius: 10*/}
+                        {/*    }}>Remove</button>*/}
+                        {/*</div>*/}
+
+
+                    <div onClick={toggleText} style={{
+                        cursor: 'pointer',
+                        color: 'white',
+                        textDecoration: 'underline',
+                        marginLeft:'50px',
+                        marginRight:'50px',
+                        marginTop: '50px'
+
+                    }}>
+                        {ShowAll  ? 'Show Less' : 'Show All'}
                     </div>
-                    <img src={talent2} alt={talent2}/>
-                    <h2>Davido</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
-                    <p>Davido is one of the leading comedian in Nigeria that
-                        has served the country for over 20 years.</p>
-                    <button onClick={onClick} style={{
-                        width: '100px',
-                        height: '40px',
-                        background: 'white',
-                        borderRadius: 10
-                    }}>Book Again</button>
-                    <button onClick={onClick} style={{
-                        width: '100px',
-                        height: '40px',
-                        background: 'white',
-                        borderRadius: 10
-                    }}>Remove</button>
 
                 </div>
             </div>
@@ -391,34 +442,33 @@ const PlannerDashboard:React.FC<CardProps> = ({imageSrc, altText, title,descript
                 width:'100em',
 
             }}>
-                <p style={{
-                    fontSize: '50px',
-                    top: '10px'
-                }}> Accepted Bookings </p>
-                <div onClick={toggleText} style={{
-                    cursor: 'pointer',
-                    color: 'white',
-                    textDecoration: 'underline',
-                    top: '30em',
-                    right:'50px',
-                    alignSelf: 'flex-end',
-                    marginTop: '10px'
-                }}>
-                    {ShowAll  ? 'Show Less' : 'Show All'}
-                </div>
-                <div className="card-text">
+                <div style={{marginLeft: '50px', display: 'flex', justifyContent: 'space-between'}}>
+                    <div>
+                        <p style={{fontSize: '50px', top: '10px'}}> Pending Bookings </p>
+                        <div className="card-text">
+                            <img src={talent2} alt={talent2}/>
+                            <h2>Davido</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Artist</h1>
+                            <p>Nigeria pop superstar Davido retured with his fourth
+                                studio album 'Timeless' stepping out of a grif induced status. </p>
+                            <button onClick={onClick} style={{
+                                width: '100px',
+                                height: '40px',
+                                background: 'white',
+                                borderRadius: 10
+                            }}>Withdraw Booking</button>
+                        </div>
+                    </div>
 
-                    <img src={talent4} alt={talent4}/>
-                    <h2>Bovi</h2> <h1 style={{color:'#BE9694',fontSize: 16}}> Comedian</h1>
-                    <p>Bovi is one of the leading comedian in Nigeria that
-                        has served the country for over 20 years.</p>
-                    <button onClick={onClick} style={{
-                        width: '100px',
-                        height: '40px',
-                        background: 'white',
-                        borderRadius: 10
-                    }}>Withdraw Bookings </button>
-
+                    <div onClick={toggleText} style={{
+                        cursor: 'pointer',
+                        color: 'white',
+                        textDecoration: 'underline',
+                        marginLeft:'50px',
+                        marginRight:'50px',
+                        marginTop: '50px'
+                    }}>
+                        {ShowAll  ? 'Show Less' : 'Show All'}
+                    </div>
 
                 </div>
             </div>

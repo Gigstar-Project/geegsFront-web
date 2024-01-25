@@ -1,5 +1,5 @@
 // SelectionPage.jsx
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Components/Assets/GeegstarLogo.svg';
 import './SelectionPage.css'
