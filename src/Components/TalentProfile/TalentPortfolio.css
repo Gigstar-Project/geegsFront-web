@@ -1,0 +1,35 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Adjust the font-family as needed */
+}
+
+.talent-portfolio {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed */
+  align-items: center;
+  flex-wrap: wrap; /* Allow talents to wrap to the next line */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 0px;
+}
+
+.logo-wrapper {
+  margin-right: 1200px;
+}
+
+.top-bar {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 0px;
+}

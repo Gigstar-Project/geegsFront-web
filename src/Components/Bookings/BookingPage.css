@@ -1,4 +1,10 @@
 /* BookingPage.css */
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Adjust the font-family as needed */
+  }
 
 /* Styles for the outer container */
 .booking-container {
@@ -41,6 +47,22 @@ h2 {
     flex: 1;
     padding: 20px;
     margin-left: 5px;
+}
+
+.confirm-button {
+    display: inline;
+    justify-content: center;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 25px;
+    border-radius: 30px;
+    background-color:rosybrown
+}
+
+.button-text {
+    color: #fff;
+    font-size: 20px;
 }
 
 .both-container {
