@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import logo from "../Assets/GeegstarLogo.svg";
+import GeegstarLogo from "../Assets/GeegstarLogo.png";
 import Logo from "../Assets/burnaaa2 1.png";
 import talent1 from "../Assets/Rectangle 17.png";
 import talent2 from "../Assets/davido.png";
@@ -40,7 +40,7 @@ const PlannerDashboard: React.FC<CardProps> = ({
       }}
     >
       <img
-        src={logo}
+        src={GeegstarLogo}
         alt="App Logo"
         style={{
           width: "200px",

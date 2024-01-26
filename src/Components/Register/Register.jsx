@@ -51,7 +51,7 @@ const Register = () => {
 
       if (response.ok) {
         setSuccessful('Account created successfully!');
-        navigate('/Planner-Dashboard');
+        navigate('/PlannerDashboard');
 
       } else {
         console.error('Account creation failed.');
@@ -60,6 +60,11 @@ const Register = () => {
       console.error('Error creating account:', error);
     }
   };
+  const handleToggleAction = () => {
+    // Toggle between 'Register' and 'Login'
+    setAction((prevAction) => (prevAction === 'Register' ? 'Login' : 'Register'));
+  };
+
 
   return (
       <div style={pageStyle} className='container'>
@@ -132,6 +137,7 @@ const Register = () => {
       >
         Register
       </button>
+      
     </div>
       </div>
   );
