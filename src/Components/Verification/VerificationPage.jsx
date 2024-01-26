@@ -1,20 +1,23 @@
-// VerificationPage.jsx
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './VerificationPage.css'
 import logo from '../Assets/GeegstarLogo.svg'
 
-// import { useNavigate } from 'react-router-dom';
-
 const VerificationPage = () => {
   const [verificationCode, setVerificationCode] = useState('');
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleContinue = () => {
     // Perform validation or API call with verificationCode
-
-    // If validation is successful, navigate to the next page
-    // navigate.push('/new-page');
+  
+    if (verificationCode.trim() === '') {
+      // Verification code is empty, show an error message or throw an exception
+      alert('Please enter the verification code before continuing.');
+    } else {
+      // Redirect to the register page
+      navigate('/register'); // Change '/register' to the actual path of your register page
+    }
   };
 
   return (
@@ -24,7 +27,6 @@ const VerificationPage = () => {
         <img src={logo} alt="Logo" className="logo" />
         </div>
         <div className="top-bar">
-          <button className="top-button">Home</button>
           <button className="top-button2">Login</button>
         </div>
       </header>
