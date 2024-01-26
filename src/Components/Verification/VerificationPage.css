@@ -29,7 +29,7 @@ body {
 }
 
 .logo-wrapper {
-    margin-right: 1200px;
+    margin-right: 1500px;
 }
   
 .top-bar {
@@ -52,6 +52,12 @@ input {
     padding: 10px;
 }
 
+.top-button2 {
+    position: absolute;
+    left: 89%;
+    top: 3%;
+}
+
 button {
     margin-top: 20px;
     padding-left: 10px;
@@ -63,6 +69,6 @@ button {
 }
 
 .button-wrapper {
-    margin-left: 150px;
+    margin-left: 130px;
     font-size: 1.5rem;
 }
