@@ -1,0 +1,110 @@
+body {
+    background-color: black;
+    height: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    /* Adjusted margin for better positioning */
+    margin: 100px auto auto;
+    background: #fff;
+    padding-bottom: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text {
+    color: #fff;
+    font-size: 36px; /* Adjusted font size for better fit */
+    font-weight: 700;
+}
+
+.underline {
+    width: 61px;
+    height: 6px;
+    background: #fff;
+    border-radius: 9px;
+}
+
+.inputs {
+    margin-top: 35px; /* Adjusted margin for better spacing */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjusted gap for better spacing */
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 480px; /* Adjusted max-width for better responsiveness */
+    height: 60px; /* Adjusted height for better fit */
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input input {
+    flex: 1; /* Adjusted flex property for better input width */
+    height: 100%;
+    padding: 0 15px; /* Adjusted padding for better spacing */
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 16px; /* Adjusted font size for better fit */
+}
+
+.input-checkbox {
+    margin-top: 20px; /* Adjusted margin for better spacing */
+    color: #797979;
+    font-size: 16px; /* Adjusted font size for better fit */
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:85%;
+    left: 47%;
+}
+
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 220px; /* Adjusted max-width for better responsiveness */
+    height: 50px; /* Adjusted height for better fit */
+    color: #fff;
+    background:  rosybrown;
+    border-radius: 25px; /* Adjusted border-radius for better appearance */
+    font-size: 18px; /* Adjusted font size for better fit */
+    font-weight: 700;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+}
+
+.gray {
+    background: #eaeaea;
+    color: #676767;
+}
+
+@media (max-width: 600px) {
+    .submit {
+      width: 100%;
+    }
+  }
