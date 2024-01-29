@@ -7,6 +7,7 @@ const Register = () => {
   const navigate = useNavigate();
   const [action, setAction] = useState('Register');
    const [successful, setSuccessful] = useState('');
+   const [phoneNumberError, setPhoneNumberError] = useState('');
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -25,10 +26,10 @@ const Register = () => {
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const {name: fieldName, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [fieldName]: value,
     }));
   };
 
@@ -38,6 +39,14 @@ const Register = () => {
         console.error('Please fill in all required fields.');
         return;
       }
+      
+      
+      const phoneNumberRegex = /^\d+$/; 
+    if (!phoneNumberRegex.test(formData.phoneNumber)) {
+      setPhoneNumberError('Please enter a valid phone number.');
+    } else {
+      setPhoneNumberError('');
+  };
 
       const response = await fetch('http://localhost:8080/api/v1/user', {
         method: 'POST',
@@ -51,7 +60,7 @@ const Register = () => {
 
       if (response.ok) {
         setSuccessful('Account created successfully!');
-        navigate('/PlannerDashboard');
+        navigate('/plannerDashboard');
 
       } else {
         console.error('Account creation failed.');
@@ -101,15 +110,7 @@ const Register = () => {
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
             />
-          </div>
-          <div className='input'>
-            <input
-                type='email'
-                placeholder='Email ID'
-                name='email'
-                value={formData.email}
-                onChange={handleInputChange}
-            />
+            {phoneNumberError && <p className='error'>{phoneNumberError}</p>}
           </div>
           <div className='input'>
             <input
