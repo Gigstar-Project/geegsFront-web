@@ -54,8 +54,10 @@ const WelcomePage = () => {
         </label>
       </div>
       <div className="role-selection">
-        <p>Select your role:</p>
-        <div className="role-buttons">
+        <div className='move-select-role'>
+        <p className='role-text-container'>Select your role:</p>
+        </div>
+        {/* <div className="role-buttons"> */}
             <div className='move-planner'>
           <button
             onClick={() => handleRoleSelection('planner')}
@@ -72,10 +74,10 @@ const WelcomePage = () => {
             Talent
           </button>
           </div>
-        </div>
+        {/* </div> */}
       </div>
       <div className="login-section">
-      <p>
+      <p className='already-text'>
           Already a member?{' '}
           <a href="/login" className="login-link">
             Login
