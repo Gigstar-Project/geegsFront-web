@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './EventDetails.css'; // Import your CSS file for this component
+import './EventDetails.css'; 
 import logo from '../Assets/GeegstarLogo.svg'
 import sampleImage from '../Assets/boy.svg'
 
@@ -27,7 +27,6 @@ const EventDetails = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform actions with the form data, e.g., send to a server or log to the console
     console.log('Form submitted:', formData);
   };
 
