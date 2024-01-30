@@ -10,6 +10,7 @@ import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboar
 
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
+import LoginAccount from "./Components/LoginAccount/LoginAccount";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/' element={<WelcomePage/>}/>
         <Route path='/verification' element={<VerificationPage/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path={'/Login'} element={<LoginAccount/>}/>
           <Route path={'/plannerDashboard'} element={<PlannerDashboard/>}/>
         <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
         <Route path='/eventDetails' element={<EventDetails/>}/>
