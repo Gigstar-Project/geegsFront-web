@@ -1,0 +1,71 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Adjust the font-family as needed */
+}
+.top-button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.top-button2 {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+}
+.first-container{
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    margin-top: -120px;
+}
+.form-container{
+    height: 100%;
+    width: 400px;
+    margin-left: 30px;
+}
+.role-container{
+    margin-left: -225px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+
+}
+.continue-container{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+.query-text{
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.continue-button{
+    background-color: white;
+    color: black;
+    border-radius: 7px;
+}
+.login{
+    color: #06D0FC;
+    cursor: pointer;
+}
+.planner{
+    border-radius: 7px;
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: -235px;
+}
+.email{
+    width: 350px;
+    height: 25px;
+}
+.createAccount{
+    margin-left: -125px;
+}
