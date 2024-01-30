@@ -53,12 +53,13 @@ const PlannerDashboard = ({ onClick }) => {
             <p style={{
                 fontSize: '50px',
                 top: '10px',
+                color: 'white'
             }}>Talents</p>
             <div
                 onClick={toggleText}
                 style={{
                     cursor: 'pointer',
-                    color: '#BE9694',
+                    color: 'white',
                     textDecoration: 'underline',
                     position: 'absolute',
                     marginTop: '-100px',
@@ -81,24 +82,17 @@ const PlannerDashboard = ({ onClick }) => {
                     <div className="card-text" style={{
                         marginTop: '20px',
                         marginLeft: '30px',
-                        marginRight: '10px'
+                       justifyContent:"center",
                     }}>
                         <img src={talent1} alt={talent1}/>
-                        <div style={{
-                            display: 'flex',
-                            // flexDirection:'row'
-                        }}>
+                        <div>
                             <h2>BasketMouth</h2>
                             <h1 style={{
                                 color: '#BE9694',
                                 fontSize: 16,
-                                right: '10px',
-                                textAlign: 'right',
-                                // marginLeft:'80px',
-
                             }}> Comedian</h1>
                         </div>
-                        <p>BasketMouth is one of the leading comedian
+                        <p style={{color: 'white'}}>BasketMouth is one of the leading comedian
                             in Nigeria that has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
                             width: '10em',
@@ -129,10 +123,10 @@ const PlannerDashboard = ({ onClick }) => {
                             fontSize: 16,
 
                         }}> Artist</h1>
-                        <p>Davido is one of the leading comedian in Nigeria that
+                        <p style={{color: 'white'}}>Davido is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
-                            width: '100px',
+                            width: '10em',
                             height: '40px',
                             background: 'white',
                             borderRadius: 10
@@ -154,10 +148,10 @@ const PlannerDashboard = ({ onClick }) => {
                     }}>
                         <img src={talent3} alt={talent3}/>
                         <h2>Burna Boy</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Artist</h1>
-                        <p>Burna Boy is one of the leading comedian in Nigeria that
+                        <p style={{color: 'white'}}>Burna Boy is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
-                            width: '100px',
+                            width: '10em',
                             height: '40px',
                             background: 'white',
                             borderRadius: 10
@@ -179,10 +173,10 @@ const PlannerDashboard = ({ onClick }) => {
                     }}>
                         <img src={talent4} alt={talent4}/>
                         <h2>Bovi</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Comedian</h1>
-                        <p>Bovi is one of the leading comedian in Nigeria that
+                        <p style={{color: 'white'}}>Bovi is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
-                            width: '100px',
+                            width: '10em',
                             height: '40px',
                             background: 'white',
                             borderRadius: 10
@@ -214,7 +208,7 @@ const PlannerDashboard = ({ onClick }) => {
                 <div style={{
                     width: '40%',
                     marginRight: '30px',
-                    height: '100%',
+                    height: '40em',
                     background: '#2B2525',
                     borderRadius: 32,
                     alignItems: "center"
@@ -223,16 +217,16 @@ const PlannerDashboard = ({ onClick }) => {
                         marginTop: '20px',
                         marginLeft: '30px'
                     }}>
-
                         <img src={talent1} alt={talent1}/>
                         <h2>BasketMouth</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Comedian</h1>
-                        <p>BasketMouth is one of the leading comedian
+                        <p style={{color: 'white'}}>BasketMouth is one of the leading comedian
                             in Nigeria that has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
-                            width: '100px',
+                            width: '10em',
                             height: '40px',
                             background: 'white',
-                            borderRadius: 10
+                            borderRadius: 10,
+                            marginTop: '20px',
                         }}>Book Talents
                         </button>
                     </div>
@@ -249,10 +243,10 @@ const PlannerDashboard = ({ onClick }) => {
 
                         <img src={talent2} alt={talent2}/>
                         <h2>Davido</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Artist</h1>
-                        <p>Davido is one of the leading comedian in Nigeria that
+                        <p style={{color: 'white'}}>Davido is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
-                            width: '100px',
+                            width: '10em',
                             height: '40px',
                             background: 'white',
                             borderRadius: 10
@@ -274,10 +268,10 @@ const PlannerDashboard = ({ onClick }) => {
 
                         <img src={talent3} alt={talent3}/>
                         <h2>Burna Boy</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Artist</h1>
-                        <p>Burna Boy is one of the leading comedian in Nigeria that
+                        <p style={{color: 'white'}}>Burna Boy is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
-                            width: '100px',
+                            width: '10em',
                             height: '40px',
                             background: 'white',
                             borderRadius: 10
@@ -297,10 +291,10 @@ const PlannerDashboard = ({ onClick }) => {
 
                         <img src={talent4} alt={talent4}/>
                         <h2>Bovi</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Comedian</h1>
-                        <p>Bovi is one of the leading comedian in Nigeria that
+                        <p style={{color: 'white'}}>Bovi is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
                         <button onClick={onClick} style={{
-                            width: '100px',
+                            width: '10em',
                             height: '40px',
                             background: 'white',
                             borderRadius: 10
@@ -309,8 +303,17 @@ const PlannerDashboard = ({ onClick }) => {
                     </div>
                 </div>
             </div>
-
-            <p style={{fontSize: '50px'}}> Manage Bookings </p>
+            <div onClick={toggleText} style={{
+                cursor: 'pointer',
+                color: 'white',
+                textDecoration: 'underline',
+                marginLeft: '50px',
+                marginRight: '50px',
+                marginTop: '50px'
+            }}>
+                {ShowAll ? 'Show Less' : 'Show All'}
+            </div>
+            <p style={{fontSize: '50px',color: 'white'}}> Manage Bookings </p>
             <div style={{marginLeft: '50px'}}>
                 <div style={{
                     backgroundColor: '#153818',
@@ -323,15 +326,15 @@ const PlannerDashboard = ({ onClick }) => {
                 }}>
                     <div style={{marginLeft: '50px', display: 'flex', justifyContent: 'space-between'}}>
                         <div>
-                            <p style={{fontSize: '50px', top: '10px'}}> Accepted Bookings </p>
+                            <p style={{fontSize: '50px', top: '10px',color: 'white'}}> Accepted Bookings </p>
                             <div className="card-text">
                                 <img src={talent4} alt={talent4}/>
                                 <h2>Bovi</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Comedian</h1>
-                                <p>Bovi is one of the leading comedian in Nigeria that has served the country for over
+                                <p style={{color: 'white'}}>Bovi is one of the leading comedian in Nigeria that has served the country for over
                                     20 years.</p>
                                 <div style={{display: "flex", justifyContent: 'space-between'}}>
                                     <button onClick={onClick} style={{
-                                        width: '100px',
+                                        width: '10em',
                                         height: '40px',
                                         background: 'white',
                                         borderRadius: 10,
@@ -339,7 +342,7 @@ const PlannerDashboard = ({ onClick }) => {
                                     }}>View Bookings Details
                                     </button>
                                     <button onClick={onClick} style={{
-                                        width: '100px',
+                                        width: '10em',
                                         height: '40px',
                                         background: 'white',
                                         borderRadius: 10
@@ -348,16 +351,7 @@ const PlannerDashboard = ({ onClick }) => {
                                 </div>
                             </div>
                         </div>
-                        <div onClick={toggleText} style={{
-                            cursor: 'pointer',
-                            color: 'white',
-                            textDecoration: 'underline',
-                            marginLeft: '50px',
-                            marginRight: '50px',
-                            marginTop: '50px'
-                        }}>
-                            {ShowAll ? 'Show Less' : 'Show All'}
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -377,7 +371,7 @@ const PlannerDashboard = ({ onClick }) => {
                     justifyContent: 'space-between'
                 }}>
                     <div>
-                        <p style={{fontSize: '50px', top: '10px'}}> Declined Bookings </p>
+                        <p style={{fontSize: '50px', top: '10px',color: 'white'}}> Declined Bookings </p>
                         <div className="card-text">
                             <img src={talent3} alt={talent3}/>
                             <h2>Burna Boy</h2>
@@ -385,18 +379,18 @@ const PlannerDashboard = ({ onClick }) => {
                                 color: '#BE9694',
                                 fontSize: 16
                             }}> Artist</h1>
-                            <p>Burna Boy is one of the leading comedian in Nigeria that has served the country for over
+                            <p style={{color: 'white'}}>Burna Boy is one of the leading comedian in Nigeria that has served the country for over
                                 20 years.</p>
-                            <div style={{justifyContent: 'space-between', display: 'flex'}}>
+                            <div style={{display: 'flex'}}>
                                 <button onClick={onClick} style={{
-                                    width: '100px',
+                                    width: '10em',
                                     height: '40px',
                                     background: 'white',
                                     borderRadius: 10
                                 }}>Book again
                                 </button>
                                 <button onClick={onClick} style={{
-                                    width: '100px',
+                                    width: '10em',
                                     height: '40px',
                                     background: 'white',
                                     borderRadius: 10
@@ -432,14 +426,14 @@ const PlannerDashboard = ({ onClick }) => {
             }}>
                 <div style={{marginLeft: '50px', display: 'flex', justifyContent: 'space-between'}}>
                     <div>
-                        <p style={{fontSize: '50px', top: '10px'}}> Pending Bookings </p>
+                        <p style={{fontSize: '50px', top: '10px',color: 'white'}}> Pending Bookings </p>
                         <div className="card-text">
                             <img src={talent2} alt={talent2}/>
                             <h2>Davido</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Artist</h1>
-                            <p>Nigeria pop superstar Davido retured with his fourth
+                            <p style={{color: 'white'}}>Nigeria pop superstar Davido retured with his fourth
                                 studio album 'Timeless' stepping out of a grif induced status. </p>
                             <button onClick={onClick} style={{
-                                width: '100px',
+                                width: '10em',
                                 height: '40px',
                                 background: 'white',
                                 borderRadius: 10
