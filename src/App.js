@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WelcomePage from './Components/Welcome/WelcomePage.jsx';
@@ -10,7 +9,6 @@ import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboar
 
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
-import LoginAccount from "./Components/LoginAccount/LoginAccount";
 
 
 const App = () => {
@@ -24,10 +22,19 @@ const App = () => {
           <Route path={'/plannerDashboard'} element={<PlannerDashboard/>}/>
         <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
         <Route path='/eventDetails' element={<EventDetails/>}/>
+        {/*<Route path='/Booking' element={<BookingPage/>}/>*/}
 
       </Routes>
     </Router>
   );
+
+
+const AppRouter = () => {
+    return (
+        <Router>
+            <AppRoutes />
+        </Router>
+    );
 };
 
-export default App;
+export default AppRouter;

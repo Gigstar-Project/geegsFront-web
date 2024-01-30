@@ -1,0 +1,28 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.top-buttons {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.top-buttons2 {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.top-bars{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+.first-containers {
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    margin-top: -120px;
+}
