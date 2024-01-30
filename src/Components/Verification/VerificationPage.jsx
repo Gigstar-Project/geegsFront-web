@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './VerificationPage.css'
-import logo from '../Assets/GeegstarLogo.svg'
+import Navbar from '../Navigation/Navbar';
 
 const VerificationPage = () => {
   const [verificationCode, setVerificationCode] = useState('');
@@ -21,30 +21,22 @@ const VerificationPage = () => {
   };
 
   return (
+    <><Navbar />
     <div className='all-container'>
-        <header className="header">
-        <div className='logo-wrapper'>
-        <img src={logo} alt="Logo" className="logo" />
+      <div className="wrapper">
+        <h2>Verification Code</h2>
+        <div className='input-container'>
+          <p>Enter the code sent to your email:</p>
+          <input
+            type="text"
+            value={verificationCode}
+            onChange={(e) => setVerificationCode(e.target.value)} />
         </div>
-        <div className="top-bar">
-          <button className="top-button2">Login</button>
+        <div className='button-wrapper'>
+          <button onClick={handleContinue} className='veri-continue'>Continue</button>
         </div>
-      </header>
-    <div className="wrapper">
-      <h2>Verification Code</h2>
-      <div className='input-container'>
-      <p>Enter the code sent to your email:</p>
-      <input
-        type="text"
-        value={verificationCode}
-        onChange={(e) => setVerificationCode(e.target.value)}
-      />
       </div>
-      <div className='button-wrapper'>
-      <button onClick={handleContinue}>Continue</button>
-      </div>
-      </div>
-    </div>
+    </div></>
   );
 };
 

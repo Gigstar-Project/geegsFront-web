@@ -4,38 +4,10 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
   }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .logo {
-    height: 50px;
-    margin-right: 50%;
-  }
-  
-  .logo-wrapper {
-    margin-right: 30%; 
-  }
-  
-  .top-bar {
-    display: flex;
-    margin-left: 10px; 
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 5px 10px;
-    font-size: 1.5rem;
-    background-color: rosybrown;
-    border-radius: 20px;
-  }
 
   button:hover {
-    background-color: #5e93ee;
+    background-color: #fff;
+    color: #000;
   }
   
   .welcome-container {
@@ -107,4 +79,20 @@ body {
     padding-left: 0%;
     padding-right: 3%;
   }
-  
+
+  .continue-button {
+    background-color:  #913906;
+    color: #fff;
+    border-radius: 15px;
+  }
+
+  .login-link {
+    color:  #913906;
+  }
+  @media screen and (max-width: 768px) {
+    .welcome-container {
+      padding: 10px; /* Adjust the padding for smaller screens */
+    }
+   
+    
+  }

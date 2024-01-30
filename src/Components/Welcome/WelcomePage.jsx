@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navigation/Navbar';
 import './WelcomePage.css'; 
-import logo from '../Assets/GeegstarLogo.svg';
 
 const WelcomePage = () => {
   const navigate = useNavigate();
@@ -13,12 +13,21 @@ const WelcomePage = () => {
     setSelectedRole(role);
   };
 
-  const handleContinue = () => {
+  const validateEmail = (input) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(input);
+  }
+
+  const handleContinue = async () => {
     if (!email.trim()) {
         setError('Email is required.');
+    } else if (!validateEmail(email)) {
+        setError('Please enter a valid email.');
+        console.log("Please enter a valid email.")
     } else {
-        setError('');
-    
+      setError('');
+     
+
     if (selectedRole === 'planner') {
       navigate('/verification');
     } else if (selectedRole === 'talent') {
@@ -34,14 +43,10 @@ const WelcomePage = () => {
   };
 
   return (
+    <><Navbar />
     <div className="welcome-container">
-      <header className="header">
-        <div className='logo-wrapper'>
-          <img src={logo} alt="Logo" className="logo" />
-        </div>
-      </header>
       <div className='move-welcome'>
-      <h1>Welcome to GeegStar!</h1>
+        <h1>Welcome to GeegStar!</h1>
       </div>
       <div className="input-section">
         <label>
@@ -49,35 +54,34 @@ const WelcomePage = () => {
           <input
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+            onChange={(e) => setEmail(e.target.value)} />
         </label>
       </div>
       <div className="role-selection">
         <div className='move-select-role'>
-        <p className='role-text-container'>Select your role:</p>
+          <p className='role-text-container'>Select your role:</p>
         </div>
         {/* <div className="role-buttons"> */}
-            <div className='move-planner'>
+        <div className='move-planner'>
           <button
             onClick={() => handleRoleSelection('planner')}
             className={selectedRole === 'planner' ? 'selected' : ''}
           >
             Planner
           </button>
-          </div>
-          <div className='move-talent'>
+        </div>
+        <div className='move-talent'>
           <button
             onClick={() => handleRoleSelection('talent')}
             className={selectedRole === 'talent' ? 'selected' : ''}
           >
             Talent
           </button>
-          </div>
+        </div>
         {/* </div> */}
       </div>
       <div className="login-section">
-      <p className='already-text'>
+        <p className='already-text'>
           Already a member?{' '}
           <a href="/login" className="login-link">
             Login
@@ -85,11 +89,11 @@ const WelcomePage = () => {
         </p>
       </div>
       <div className='move-continue'>
-      <button onClick={handleContinue} className="continue-button">
-        Continue
-      </button>
+        <button onClick={handleContinue} className="continue-button">
+          Continue
+        </button>
       </div>
-    </div>
+    </div></>
   );
 };
 

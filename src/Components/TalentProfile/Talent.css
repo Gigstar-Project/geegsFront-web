@@ -13,6 +13,11 @@ body {
     margin: auto;
     height: 100vh;
   }
+
+  .move-profile-pic {
+    position: absolute;
+    left: 43%
+  }
   
   .profile-pic {
     width: 250px; 
@@ -32,7 +37,10 @@ body {
   }
 
   .name-container {
-    margin-bottom: 0px;
+    position: absolute;
+    left: 44%;
+    bottom: 61%;
+    
   }
 
   p {
@@ -46,37 +54,52 @@ body {
     color: #fff;
   }
 
-  .move-name {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-  }
-
-  .move-description{
-    position: absolute;
-    top: 38%;
-    left: 10%;
-  }
-
-  .move-button {
-    position: absolute;
-    top: 40%;
-    left: 11%;
-  }
-
-  .edit-button-container {
-    font-size: 1.5rem;
-    margin-right: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 30px;
-    padding-left: 10px;
+  .style-edit-profile {
+    background-color:  #913906;
+    color: #fff;
+    border-radius: 15px;
   }
 
   .manage-bookings-container {
     position: absolute;
-    top: 53%;
-    right: 75%;
+    top: 47%;
+    right: 76%;
+  }
+
+  .move-border {
+    position: absolute;
+    right: 20%;
+    top: 28%;
+  }
+
+  .border-booking {
+    background-color: #063510;
+    border: 1px solid #063510; 
+    padding: 50%; 
+    margin-top: 250px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 1472px;
+    border-radius: 15px;
+    padding-right: 15%;
+    height: 13vh;
+    width: 5%;
+  }
+
+  .show-all-container {
+    position: absolute;
+    top: 45%;
+    left: 110%;
+  }
+
+  .accepted-booking-container {
+    position: absolute;
+    top: 36%;
+    left: 5%;
+    font-size: 1.5rem;
+    color: #fff;
   }
 
   .top-right-container {
@@ -85,21 +108,12 @@ body {
     top: 5%;
   }
 
-  button {
-    background-color: rosybrown;
-    font-size: 1.5rem;
-    margin-top: 20px;
-    border-radius: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
   .portfolio-container {
     position: relative;
     height: 50vh;
   }
 
-  .border-portfolio-container {
+  /* .border-portfolio-container {
     
     border: none #1a0404; 
     padding: 10px;
@@ -109,6 +123,10 @@ body {
     border-radius: 30px;
     margin-left: 135%;
     top: 20%;
+  } */
+
+  .edit-button-container {
+   left: 50px;
   }
 
   .image-container {
@@ -118,7 +136,7 @@ body {
     bottom: 5%;
   }
   
-  .sportify {
+  /* .sportify {
     width: 20%; 
     height: 50px;
   }
@@ -192,27 +210,12 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 25px;
-  }
+  } */
 
   .booking-container {
     position: absolute;
     top: 155%;
     left: 0px;
-  }
-
-  .accepted-booking-container {
-    position: absolute;
-    top: 36%;
-    left: 5%;
-    font-size: 1.5rem;
-    color: #fff;
-  }
-
-  .show-all-container {
-    position: absolute;
-    top: 45%;
-    left: 100%;
-    font-size: 0rem;
   }
 
   .eldorado-container {
@@ -236,28 +239,6 @@ body {
     position: absolute;
     top: 84%;
     right: 74%
-  }
-
-  .border-booking {
-    background-color: #063510;
-    border: 1px solid #063510; 
-    padding: 50%; 
-    margin-top: 250px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 1470px;
-    border-radius: 20px;
-    padding-right: 9%;
-    height: 13vh;
-    width: 5%;
-  }
-
-  .move-border {
-    position: absolute;
-    right: 14%;
-    top: 34%;
   }
 
   .eldorado-reschedule-button {
@@ -298,8 +279,8 @@ body {
 
   .move-border2 {
     position: absolute;
-    right: 14%;
-    top: 85%;
+    right: 20%;
+    top: 75%;
   }
 
   .border-booking2 {
@@ -312,8 +293,8 @@ body {
      padding-top: 10%;
      padding-bottom: 10%;
      padding-left: 1470px;
-     border-radius: 20px;
-     padding-right: 9%;
+     border-radius: 15px;
+     padding-right: 15%;
      height: 13vh;
      width: 5%;
    }
@@ -360,8 +341,7 @@ body {
   .show-all-container2 {
     position: absolute;
     top: 45%;
-    left: 100%;
-    font-size: 0rem;
+    left: 110%;
   }
 
   .nini-accept-button {
@@ -394,8 +374,8 @@ body {
 
   .move-border3 {
     position: absolute;
-    right: 14%;
-    top: 136%;
+    right: 20%;
+    top: 122%;
   }
 
   .border-booking3 {
@@ -408,8 +388,8 @@ body {
      padding-top: 10%;
      padding-bottom: 10%;
      padding-left: 1470px;
-     border-radius: 20px;
-     padding-right: 9%;
+     border-radius: 15px;
+     padding-right: 15%;
      height: 13vh;
      width: 5%;
    }
@@ -456,8 +436,7 @@ body {
   .show-all-container3 {
     position: absolute;
     top: 45%;
-    left: 100%;
-    font-size: 0rem;
+    left: 110%;
   }
 
   .sydney-accept-button {
@@ -488,6 +467,47 @@ body {
     background-color: #fff;
   }
 
+  .move-description {
+    position: absolute;
+    left: 47%;
+    bottom: 60%;
+  }
+
+  .move-button {
+    position: absolute;
+    left: 46%;
+    bottom: 55%;
+  }
+
+/*   
+  @media screen and (max-width: 768px) {
+    .move-profile-pic,
+    .move-name,
+    .move-description,
+    .move-button,
+    .name-container {
+      position: static; 
+      left: auto; 
+      top: auto;
+      text-align: center; 
+      margin: 10px 0; 
+    }
+  
+    .move-profile-pic {
+      position: absolute;
+      left: 19%;
+      bottom: 70%;
+    }
+  
+    .move-name {
+    }
+
+    .name-container {
+      position: absolute;
+      left: 24%;
+      top: 23%;
+    }
+  }
   
 
-  
+   */
