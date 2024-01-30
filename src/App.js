@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WelcomePage from './Components/Welcome/WelcomePage.jsx';
@@ -11,7 +9,6 @@ import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboar
 
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
-// import BookingPage from "./Components/Bookings/BookingPage";
 
 
 const App = () => {
@@ -21,6 +18,7 @@ const App = () => {
         <Route path='/' element={<WelcomePage/>}/>
         <Route path='/verification' element={<VerificationPage/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path={'/Login'} element={<LoginAccount/>}/>
           <Route path={'/plannerDashboard'} element={<PlannerDashboard/>}/>
         <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
         <Route path='/eventDetails' element={<EventDetails/>}/>
@@ -29,26 +27,7 @@ const App = () => {
       </Routes>
     </Router>
   );
-=======
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import CreateAccount from './Components/CreateAccount/CreateAccount';
-import WelcomePage from "./Components/WelcomePage/WelcomePage";
-// import Home from './Components/Home';
-// import Login from './Components/Login';
-// import Continue from "./Components/Continue";
 
-const AppRoutes = () => {
-    return (
-        <Routes>
-            <Route path="/" element={<WelcomePage />} />
-            {/*<Route path="/home" element={<Home />} />*/}
-            {/*<Route path="/login" element={<Login />} />*/}
-            {/*<Route path= "/continue" element={<Continue/>}/>*/}
-        </Routes>
-    );
->>>>>>> origin/bright
-};
 
 const AppRouter = () => {
     return (
