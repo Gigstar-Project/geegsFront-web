@@ -6,8 +6,8 @@ import logo from '../../Components/Assets/GeegstarLogo.svg';
 const Register = () => {
   const navigate = useNavigate();
   const [action, setAction] = useState('Register');
-   const [successful, setSuccessful] = useState('');
-   const [phoneNumberError, setPhoneNumberError] = useState('');
+  const [successful, setSuccessful] = useState('');
+  const [phoneNumberError, setPhoneNumberError] = useState('');
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -26,7 +26,7 @@ const Register = () => {
   };
 
   const handleInputChange = (e) => {
-    const {name: fieldName, value } = e.target;
+    const { name: fieldName, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [fieldName]: value,
@@ -36,19 +36,18 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       if (!formData.firstName || !formData.lastName || !formData.phoneNumber || !formData.email || !formData.password || !formData.displayName) {
-        console.error('Please fill in all required fields.');
-        return;
-      }
-      
-      
-      const phoneNumberRegex = /^\d+$/; 
-    if (!phoneNumberRegex.test(formData.phoneNumber)) {
-      setPhoneNumberError('Please enter a valid phone number.');
-    } else {
-      setPhoneNumberError('');
-  };
 
-      const response = await fetch('http://localhost:8080/api/v1/user', {
+
+      }
+
+      const phoneNumberRegex = /^\d+$/;
+      if (!phoneNumberRegex.test(formData.phoneNumber)) {
+        setPhoneNumberError('Please enter a valid phone number.');
+      } else {
+        setPhoneNumberError('');
+      }
+
+      const response = await fetch('http://localhost:8080/api/v1/user/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,24 +55,23 @@ const Register = () => {
         body: JSON.stringify(formData),
       });
 
-      console.log(response)
+      const responseData = await response.json();
 
       if (response.ok) {
         setSuccessful('Account created successfully!');
         navigate('/plannerDashboard');
-
       } else {
-        console.error('Account creation failed.');
+        console.error('Account creation failed:', responseData.error || 'Unknown error');
       }
     } catch (error) {
       console.error('Error creating account:', error);
     }
   };
+
   const handleToggleAction = () => {
     // Toggle between 'Register' and 'Login'
     setAction((prevAction) => (prevAction === 'Register' ? 'Login' : 'Register'));
   };
-
 
   return (
       <div style={pageStyle} className='container'>
@@ -132,14 +130,13 @@ const Register = () => {
           </div>
         </div>
         <div className='submit-container'>
-      <button
-        className={action === 'Login' ? 'submit gray' : 'submit'}
-        onClick={handleRegister}
-      >
-        Register
-      </button>
-      
-    </div>
+          <button
+              className={action === 'Login' ? 'submit gray' : 'submit'}
+              onClick={handleRegister}
+          >
+            Register
+          </button>
+        </div>
       </div>
   );
 };
