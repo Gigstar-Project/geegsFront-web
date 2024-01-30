@@ -7,7 +7,9 @@ import Register from './Components/Register/Register.jsx';
 import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboard.jsx'
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
+import LoginAccount from "./Components/LoginAccount/LoginAccount";
 import BookingConfirmed from './Components/BookingConfirmed/BookingConfirmed.jsx';
+import Bookings from './Components/Bookings/BookingPage.jsx';
 
 
 const App = () => {
@@ -16,12 +18,13 @@ const App = () => {
       <Routes>
         <Route path='/' element={<WelcomePage/>}/>
         <Route path='/verification' element={<VerificationPage/>}/>
-        <Route path='/register' element={<Register/>}/> 
-        <Route path='/plannerDashboard' element={<PlannerDashboard/>}/>
+        <Route path='/register' element={<Register/>}/>
+          <Route path={'/plannerDashboard'} element={<PlannerDashboard/>}/>
         <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
         <Route path='/eventDetails' element={<EventDetails/>}/>
         <Route path='/bookingConfirmed' element={<BookingConfirmed/>}/>
-
+        <Route path='/loginAccount' element={<LoginAccount/>}/>
+         <Route path='/booking' element={<Bookings/>}/>
       </Routes>
     </Router>
   );

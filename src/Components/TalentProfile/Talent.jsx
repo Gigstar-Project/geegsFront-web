@@ -24,11 +24,11 @@ const Talent = ({ name, description, onEdit }) => {
       <div className='move-description'>
       <p>{description}</p>
       </div>
-      <div className='move-button'>
+      {/* <div className='move-button'>
       <div className='edit-button-container'>
       <button onClick={onEdit} className='style-edit-profile'>Edit Profile</button>
       </div>
-      </div>
+      </div> */}
       <div className='manage-bookings-container'>
           <h2>Manage Bookings</h2>
         </div>
@@ -46,15 +46,15 @@ const Talent = ({ name, description, onEdit }) => {
         <div className='planner-container'>
           <p className='planner-para'>Planner</p>
         </div>
-        <div className='show-all-container'>
+        {/* <div className='show-all-container'>
           <p>Show All</p>
-        </div>
-        <div className='eldorado-reschedule-button'>
+        </div> */}
+        {/* <div className='eldorado-reschedule-button'>
           <button className='reschedule-button'>Reschedule Booking</button>
-        </div>
-        <div className='eldorado-contact-button'>
+        </div> */}
+        {/* <div className='eldorado-contact-button'>
           <button className='contact-button'>Contact Planner</button>
-        </div>
+        </div> */}
         </div>
         </div>
         <div className='move-border2'>
@@ -71,15 +71,15 @@ const Talent = ({ name, description, onEdit }) => {
         <div className='planner-container2'>
           <p className='planner-para2'>Planner</p>
         </div>
-        <div className='show-all-container2'>
+        {/* <div className='show-all-container2'>
           <p>Show All</p>
-        </div>
-        <div className='nini-accept-button'>
+        </div> */}
+        {/* <div className='nini-accept-button'>
           <button className='reschedule-button2'>Accept Booking</button>
-        </div>
-        <div className='nini-contact-button'>
+        </div> */}
+        {/* <div className='nini-contact-button'>
           <button className='contact-button2'>Contact Planner</button>
-        </div>
+        </div> */}
         </div>
         </div>
         <div className='move-border3'>
@@ -96,15 +96,15 @@ const Talent = ({ name, description, onEdit }) => {
         <div className='comedian-container'>
           <p className='comedian-para'>Comedian</p>
         </div>
-        <div className='show-all-container3'>
+        {/* <div className='show-all-container3'>
           <p>Show All</p>
-        </div>
-        <div className='sydney-accept-button'>
+        </div> */}
+        {/* <div className='sydney-accept-button'>
           <button className='reschedule-button3'>Accept Booking</button>
-        </div>
-        <div className='sydney-contact-button'>
+        </div> */}
+        {/* <div className='sydney-contact-button'>
           <button className='contact-button3'>Decline Planner</button>
-        </div>
+        </div> */}
         </div>
         </div>
       <div className='top-right-container'>

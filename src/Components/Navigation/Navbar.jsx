@@ -1,10 +1,15 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../Assets/GeegstarLogo.svg';
 import './Navbar.css'; 
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/')
+  }
 
   // Function to render the appropriate button based on the current location
   const renderButton = () => {
@@ -20,7 +25,7 @@ const Navbar = () => {
       return (
         <> 
         <div className='move-bar2'>
-          <button to="/logout" className='style-logout'>Logout</button> {/* Adjust the path for the logout route */}
+          <button onClick={handleLogout} className='style-logout'>Logout</button> {/* Adjust the path for the logout route */}
        </div>
        <div className='move-bar'>
           <button to="/" className='style-home'>Home</button>

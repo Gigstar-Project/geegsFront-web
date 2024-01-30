@@ -1,70 +1,56 @@
-// BookingPage.jsx
-
-import React from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
+import React, { useState } from 'react';
+import Navbar from '../Navigation/Navbar';
+import 'moment/locale/en-gb';
+import { Calendar as BigCalendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import sampleImage from '../Assets/BookingBovi.svg';
-import logo from '../Assets/GeegstarLogo.svg';
-import './BookingPage.css'; // Import the CSS file
+import './BookingPage.css'; // Import your CSS file
+import bookedTalentImage from '../Assets/Bovi.svg';
 
 const localizer = momentLocalizer(moment);
 
 const BookingPage = () => {
-  const events = [
+  const [events, setEvents] = useState([
     {
-      title: 'Booked Event',
-      start: new Date(2023, 0, 1, 10, 0),
-      end: new Date(2023, 0, 1, 12, 0),
+      title: 'Talent Booked',
+      start: new Date(2024, 1, 15), // Replace with the booked date
+      end: new Date(2024, 1, 15), // Replace with the booked date
     },
-    // Add more events as needed
-  ];
+  ]);
 
-  const eventStyleGetter = (event, start, end, isSelected) => {
-    const style = {
-      backgroundColor: 'black', // Set your desired background color
-      color: 'white', // Set the text color
-    };
-    return {
-      style,
-    };
+  const handleContinue = () => {
+    // Add logic for continue button click
+    console.log('Continue clicked');
   };
 
   return (
-    <div className="booking-container">
-      <div className="top-bar">
-        <img src={logo} alt="Logo" className="logo" />
-        <div className="top-buttons">
-          <button className="top-button">Home</button>
-          <button className="top-button2">Logout</button>
+    <>
+      <Navbar />
+      <div className="booking-container">
+        <div className="wrapper">
+        <div className="talent-image-container">
+          <img src={bookedTalentImage} alt="Booked Talent" className="talent-image" />
         </div>
-      </div>
-      <div className='both-container'>
-      <div className="image-section">
-        {/* Image Section */}
-        <img src={sampleImage} alt="Sample" className="image" />
-      </div>
-      <div className="calendar-section">
-        {/* Calendar Section */}
-        <h2>Bookings</h2>
-        <div className='calender-container'>
-          <Calendar
+        <div className='move-calender'>
+        <div className="calendar-container">
+          <BigCalendar
             localizer={localizer}
             events={events}
             startAccessor="start"
             endAccessor="end"
-            eventStyleGetter={eventStyleGetter}
-            className="rbc-calendar"
+            views={['month', 'agenda']}
+            style={{ height: 500 }}
           />
         </div>
-        <button className='confirm-button'>
-          <div className='button-text'>
-          Confirm
-          </div>
-        </button>
+        </div>
+        </div>
+        <div className="continue-button-container">
+          <button onClick={handleContinue} className="continue-button">
+            Continue
+          </button>
+        </div>
       </div>
-      </div>
-    </div>
+    </>
   );
 };
 

@@ -56,16 +56,45 @@ body {
     color: #fff;
   }
 
-  .move-talent {
-    position: relative;
-    margin-left: 23%;
-  }
-  
-  .move-planner {
-    position: relative;
-    margin-left: 20%;
-  }
+  .move-planner button {
+  background-color: #fff;
+  color: black;
+  padding: 15px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
 
+.move-talent button {
+  background-color: #fff;
+  color: black;
+  padding: 15px 66px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.move-planner button:hover,
+.move-talent button:hover {
+  background-color: #fff; /* Set the hover background color */
+  color: #913906; /* Set the hover text color */
+}
+
+/* Styles for the selected role buttons */
+.move-planner button.selected,
+.move-talent button.selected {
+  background-color: #fff;
+}
   p {
     font-size: 1.5rem;
   }
@@ -77,7 +106,7 @@ body {
   .move-continue {
     margin-bottom: 60%; 
     padding-left: 0%;
-    padding-right: 3%;
+    padding-right: 5%;
   }
 
   .continue-button {
