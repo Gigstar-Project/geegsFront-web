@@ -10,6 +10,7 @@ import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboar
 
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
+// import BookingPage from "./Components/Bookings/BookingPage";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path={'/plannerDashboard'} element={<PlannerDashboard/>}/>
         <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
         <Route path='/eventDetails' element={<EventDetails/>}/>
+        {/*<Route path='/Booking' element={<BookingPage/>}/>*/}
 
       </Routes>
     </Router>
