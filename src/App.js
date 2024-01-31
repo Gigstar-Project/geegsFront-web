@@ -6,7 +6,7 @@ import Register from './Components/Register/Register.jsx';
 
 import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboard.jsx'
 import LoginAccount from '../src/Components/LoginAccount/LoginAccount.jsx'
-// import BookingPage from '../src/Components/Bookings/BookingPage.jsx'
+import BookingPage from '../src/Components/Bookings/BookingPage.jsx'
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
 
