@@ -7,13 +7,14 @@ const Register = () => {
   const navigate = useNavigate();
   const [action, setAction] = useState('Register');
   const [successful, setSuccessful] = useState('');
-  const [phoneNumberError, setPhoneNumberError] = useState('');
+  const [errors, setErrors] = useState({
+    phoneNumber: '',
+  });
 
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     phoneNumber: '',
-    email: '',
     password: '',
     displayName: '',
   });
@@ -23,6 +24,11 @@ const Register = () => {
     color: '#fff',
     height: '100vh',
     width: '100%',
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneNumberRegex = /^\d+$/;
+    return phoneNumberRegex.test(phoneNumber);
   };
 
   const handleInputChange = (e) => {
@@ -35,16 +41,28 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      if (!formData.firstName || !formData.lastName || !formData.phoneNumber || !formData.email || !formData.password || !formData.displayName) {
+      console.log('Submitting registration:', formData);
+      setErrors({ phoneNumber: '' });
 
-
+      const requiredFields = ['firstName', 'lastName', 'phoneNumber', 'password', 'displayName'];
+      for (const field of requiredFields) {
+        if (!formData[field]) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            [field]: `${field.charAt(0).toUpperCase() + field.slice(1)} is required`,
+          }));
+          console.log('Validation failed for:', field);
+          return;
+        }
       }
 
-      const phoneNumberRegex = /^\d+$/;
-      if (!phoneNumberRegex.test(formData.phoneNumber)) {
-        setPhoneNumberError('Please enter a valid phone number.');
-      } else {
-        setPhoneNumberError('');
+      if (!validatePhoneNumber(formData.phoneNumber)) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          phoneNumber: 'Please enter a valid phone number.',
+        }));
+        console.log('Validation failed for phone number');
+        return;
       }
 
       const response = await fetch('http://localhost:8080/api/v1/user/register', {
@@ -58,6 +76,7 @@ const Register = () => {
       const responseData = await response.json();
 
       if (response.ok) {
+        console.log('Account created successfully:', responseData);
         setSuccessful('Account created successfully!');
         navigate('/plannerDashboard');
       } else {
@@ -68,18 +87,18 @@ const Register = () => {
     }
   };
 
-  const handleToggleAction = () => {
-    // Toggle between 'Register' and 'Login'
-    setAction((prevAction) => (prevAction === 'Register' ? 'Login' : 'Register'));
-  };
-
   return (
       <div style={pageStyle} className='container'>
         <div className='header'>
           <img src={logo} alt='Logo' className='logo' />
-          <div className='text'>{action}</div>
-          <div className='underline'></div>
+
+
         </div>
+
+        <div className='inner-box3'>
+
+        <div className='text'>{action}</div>
+          <hr style={{width: "100px"}}/ >
         <div className='inputs'>
           <div className='input'>
             <input
@@ -91,6 +110,7 @@ const Register = () => {
             />
           </div>
           {successful && <p>{successful}</p>}
+          {errors.firstName && <p className='error'>{errors.firstName}</p>}
           <div className='input'>
             <input
                 type='text'
@@ -100,6 +120,7 @@ const Register = () => {
                 onChange={handleInputChange}
             />
           </div>
+          {errors.lastName && <p className='error'>{errors.lastName}</p>}
           <div className='input'>
             <input
                 type='tel'
@@ -108,7 +129,7 @@ const Register = () => {
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
             />
-            {phoneNumberError && <p className='error'>{phoneNumberError}</p>}
+            {errors.phoneNumber && <p className='error'>{errors.phoneNumber}</p>}
           </div>
           <div className='input'>
             <input
@@ -119,6 +140,7 @@ const Register = () => {
                 onChange={handleInputChange}
             />
           </div>
+          {errors.password && <p className='error'>{errors.password}</p>}
           <div className='input'>
             <input
                 type='text'
@@ -128,17 +150,16 @@ const Register = () => {
                 onChange={handleInputChange}
             />
           </div>
+          {errors.displayName && <p className='error'>{errors.displayName}</p>}
         </div>
         <div className='submit-container'>
-          <button
-              className={action === 'Login' ? 'submit gray' : 'submit'}
-              onClick={handleRegister}
-          >
+          <button className={action === 'Login' ? 'submit gray' : 'submit'} onClick={handleRegister}>
             Register
           </button>
         </div>
+        </div>
       </div>
+
   );
 };
-
-export default Register;
+  export default Register;

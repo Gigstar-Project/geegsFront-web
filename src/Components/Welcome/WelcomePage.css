@@ -6,10 +6,7 @@ body {
   }
   
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    margin-right: 900px;
   }
   
   .logo {
@@ -35,7 +32,8 @@ body {
   }
 
   button:hover {
-    background-color: #5e93ee;
+    /*background-color: #5e93ee;*/
+    cursor: pointer;
   }
   
   .welcome-container {
@@ -43,6 +41,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+  }
+  .inner-box{
+    background-color: #36454f;
+    width: 900px;
+    height: 800px;
+    border-radius: 15px;
   }
   
   h1 {
@@ -51,11 +56,17 @@ body {
   }
   
   .move-welcome {
-    margin-left: 1%; 
+    /*margin-left: 1%; */
+    display: flex;
+    justify-content: center;
+
   }
   
   .input-section {
-    font-size: 2.1rem;
+    font-size: 26px;
+    width: 500px;
+    margin-left: 40px;
+    /*margin-top: -20px;*/
   }
   
   input {
@@ -66,18 +77,24 @@ body {
     box-sizing: border-box;
     border-radius: 15px;
   }
+  .input-field{
+    margin-top: 10px;
+  }
   
   .role-selection {
     margin-top: 20px; 
     font-size: 1.8rem;
+    margin-left: 40px;
+    /*margin-right: 530px;*/
   }
   
   .move-select-role {
-    bottom: 15%;
+    margin: auto;
   }
   
   .role-text-container {
     color: #fff;
+    margin:auto;
   }
 
   .already-text {
@@ -86,12 +103,12 @@ body {
 
   .move-talent {
     position: relative;
-    margin-left: 23%;
+    margin-left: 5%;
   }
   
   .move-planner {
     position: relative;
-    margin-left: 20%;
+    margin-left: 5%;
   }
 
   p {
@@ -99,12 +116,26 @@ body {
   }
   
   .login-section {
-    margin-top: 20px; 
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    margin-top: 30px;
+    margin-left: 240px;
   }
-  
-  .move-continue {
-    margin-bottom: 60%; 
-    padding-left: 0%;
-    padding-right: 3%;
+  .selected{
+    background-color: #5e93ee;
+    width: 150px;
+  }
+  .unselected{
+    background-color: white;
+    width: 150px;
+  }
+  .continue-button{
+    width: 350px;
+    height: 70px;
+    border-radius: 7px;
+    color:black;
+    font-weight: bold;
+    margin-left: 200px;
+    margin-top: auto;
   }
   
