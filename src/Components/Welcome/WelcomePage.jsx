@@ -15,6 +15,7 @@ const WelcomePage = () => {
 
   const handleContinue = () => {
     if (!email.trim()) {
+        alert("you have to pass in your email address")
         setError('Email is required.');
     } else {
         setError('');
@@ -40,15 +41,18 @@ const WelcomePage = () => {
           <img src={logo} alt="Logo" className="logo" />
         </div>
       </header>
+        <div className='inner-box'>
       <div className='move-welcome'>
       <h1>Welcome to GeegStar!</h1>
       </div>
+
       <div className="input-section">
         <label>
           Enter your email:
           <input
             type="email"
             value={email}
+            className='input-field'
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
@@ -61,7 +65,7 @@ const WelcomePage = () => {
             <div className='move-planner'>
           <button
             onClick={() => handleRoleSelection('planner')}
-            className={selectedRole === 'planner' ? 'selected' : ''}
+            className={selectedRole === 'planner' ? 'selected' : 'unselected'}
           >
             Planner
           </button>
@@ -69,7 +73,7 @@ const WelcomePage = () => {
           <div className='move-talent'>
           <button
             onClick={() => handleRoleSelection('talent')}
-            className={selectedRole === 'talent' ? 'selected' : ''}
+            className={selectedRole === 'talent' ? 'selected' : 'unselected'}
           >
             Talent
           </button>
@@ -89,6 +93,7 @@ const WelcomePage = () => {
         Continue
       </button>
       </div>
+        </div>
     </div>
   );
 };
