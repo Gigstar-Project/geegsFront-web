@@ -1,6 +1,6 @@
 .booking-container {
    width: 100%;
-   margin-top: -140vh;
+   margin-top: -130vh;
    /* border: 2px solid red; */
   }
   
@@ -26,8 +26,28 @@
 
   .move-calender{
     flex: 1;
+    
   }
 
+  h2 {
+    color: #fff
+  }
+
+  .booking-move {
+    position: absolute;
+    bottom: 100%;
+    left: 60%;
+  }
+   
+  .p-move {
+    position: absolute;
+    bottom: 32%;
+    left: 20%
+  }
+
+  p {
+    color: #fff;
+  }
  
   /* .calendar-container {
     width: 300%;

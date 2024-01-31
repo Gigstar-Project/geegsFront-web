@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppLogo from '../Assets/GeegstarLogo.svg';
 import Logo from '../Assets/burnaaa2 1.png';
 import talent1 from '../Assets/Rectangle 17.png';
@@ -10,6 +10,7 @@ import talent4 from '../Assets/Bovi.png';
 const PlannerDashboard = ({ onClick }) => {
     const [ShowAll, setShowMore] = useState(false);
     const [isLoggedIn, setLoggedIn] = useState(true);
+    const navigate = useNavigate();
 
     const toggleText = () => {
         setShowMore(!ShowAll);
@@ -17,6 +18,13 @@ const PlannerDashboard = ({ onClick }) => {
     const handleLogout = () => {
         setLoggedIn(false);
         console.log('User logged out');
+    };
+
+    const handleBookTalent = (talentInfo) => {
+        navigate({
+            pathname:'/booking',
+            state: { talentInfo },
+        });
     };
     return (
         <div
@@ -94,12 +102,17 @@ const PlannerDashboard = ({ onClick }) => {
                         </div>
                         <p style={{color: 'white'}}>BasketMouth is one of the leading comedian
                             in Nigeria that has served the country for over 20 years.</p>
-                        <button onClick={onClick} style={{
-                            width: '10em',
-                            height: '40px',
-                            background: 'white',
-                            borderRadius: 10,
-                            justifyContent: 'center'
+                        <button onClick={() => handleBookTalent({
+                           name: 'BasketMouth',
+                           category: 'Comedian',
+                           image: talent1,
+                           description: "BasketMouth is one of the leading comedians in Nigeria that has served the country for over 20 years.",
+                       })} style={{
+                           width: '10em',
+                           height: '40px',
+                           background: 'white',
+                           borderRadius: 10,
+                           justifyContent: 'center'
                         }}>Book Talents
                         </button>
                     </div>
@@ -125,11 +138,17 @@ const PlannerDashboard = ({ onClick }) => {
                         }}> Artist</h1>
                         <p style={{color: 'white'}}>Davido is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
-                        <button onClick={onClick} style={{
+                        <button onClick={() => handleBookTalent({
+                            name: 'Davido',
+                            category: "Artist",
+                            image: talent2,
+                            description: "Davido is one of the leading comedian in Nigeria that has served the country for over 20 years.",
+                        })} style={{    
                             width: '10em',
                             height: '40px',
                             background: 'white',
-                            borderRadius: 10
+                            borderRadius: 10,
+                            justifyContent: 'center'
                         }}>Book Talents
                         </button>
                     </div>
@@ -150,11 +169,17 @@ const PlannerDashboard = ({ onClick }) => {
                         <h2>Burna Boy</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Artist</h1>
                         <p style={{color: 'white'}}>Burna Boy is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
-                        <button onClick={onClick} style={{
+                        <button onClick={() => handleBookTalent({
+                            name: 'Burna Boy',
+                            category: 'Comedian',
+                            image: talent3,
+                            description: 'Burna Boy is one of the leading comedian in Nigeria that has served the country for over 20 years.'
+                        })} style={{    
                             width: '10em',
                             height: '40px',
                             background: 'white',
-                            borderRadius: 10
+                            borderRadius: 10,
+                            justifyContent: 'center'
                         }}>Book Talents
                         </button>
                     </div>
@@ -172,14 +197,21 @@ const PlannerDashboard = ({ onClick }) => {
                         marginLeft: '30px'
                     }}>
                         <img src={talent4} alt={talent4}/>
-                        <h2>Bovi</h2> <h1 style={{color: '#BE9694', fontSize: 16}}> Comedian</h1>
+                        <h2>Bovi</h2> 
+                        <h1 style={{color: '#BE9694', fontSize: 16}}> Comedian</h1>
                         <p style={{color: 'white'}}>Bovi is one of the leading comedian in Nigeria that
                             has served the country for over 20 years.</p>
-                        <button onClick={onClick} style={{
+                        <button onClick={() => handleBookTalent({
+                            name: 'Bovi',
+                            category: 'Comedian',
+                            image: talent4,
+                            description: "Bovi is one of the leading comedian in Nigeria that has served the country for over 20 years."
+                        })} style={{    
                             width: '10em',
                             height: '40px',
                             background: 'white',
-                            borderRadius: 10
+                            borderRadius: 10,
+                            justifyContent: 'center'
                         }}>Book Talents
                         </button>
                     </div>
@@ -454,10 +486,35 @@ const PlannerDashboard = ({ onClick }) => {
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="card-text">
+        <img src={talent1} alt={talent1} />
+        <h2>BasketMouth</h2> <h1 style={{ color: '#BE9694', fontSize: 16 }}> Comedian</h1>
+        <p style={{ color: 'white' }}>
+          BasketMouth is one of the leading comedians in Nigeria that has served the country for over 20 years.
+        </p>
+        <button
+          onClick={() =>
+            handleBookTalent({
+              name: 'BasketMouth',
+              category: 'Comedian',
+              image: talent1,
+              description: "BasketMouth is one of the leading comedians in Nigeria that has served the country for over 20 years.",
+            })
+          }
+          style={{
+            width: '10em',
+            height: '40px',
+            background: 'white',
+            borderRadius: 10,
+            marginTop: '20px',
+          }}
+        >
+          Book Talents
+        </button>
+      </div>
+      {/* ... (similar modifications for other talent cards) */}
+    </div>
+  );
+};
 
-
-    );
-
-}
 export default PlannerDashboard;

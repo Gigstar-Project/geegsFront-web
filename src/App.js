@@ -19,12 +19,12 @@ const App = () => {
         <Route path='/' element={<WelcomePage/>}/>
         <Route path='/verification' element={<VerificationPage/>}/>
         <Route path='/register' element={<Register/>}/>
-          <Route path={'/plannerDashboard'} element={<PlannerDashboard/>}/>
-        <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
-        <Route path='/eventDetails' element={<EventDetails/>}/>
+        <Route path={'/plannerDashboard'} element={<PlannerDashboard/>}/>
+        <Route path='/booking' element={<Bookings/>}/>
         <Route path='/bookingConfirmed' element={<BookingConfirmed/>}/>
+        <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
         <Route path='/loginAccount' element={<LoginAccount/>}/>
-         <Route path='/booking' element={<Bookings/>}/>
+        <Route path='/eventDetails' element={<EventDetails/>}/>
       </Routes>
     </Router>
   );

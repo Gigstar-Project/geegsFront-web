@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../Navigation/Navbar';
 import 'moment/locale/en-gb';
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Calendar as BigCalendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -10,17 +11,23 @@ import bookedTalentImage from '../Assets/Bovi.svg';
 const localizer = momentLocalizer(moment);
 
 const BookingPage = () => {
-  const [events, setEvents] = useState([
-    {
-      title: 'Talent Booked',
-      start: new Date(2024, 1, 15), // Replace with the booked date
-      end: new Date(2024, 1, 15), // Replace with the booked date
-    },
-  ]);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [events, setEvents] = useState([]);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const talentInfo = location.state && location.state.talentInfo;
+
+  const handleDateSelect = (slotInfo) => {
+    setSelectedDate(slotInfo.start);
+  };
 
   const handleContinue = () => {
-    // Add logic for continue button click
-    console.log('Continue clicked');
+    if (selectedDate) {
+      setEvents([...events, {title: 'Talent Booked', start: selectedDate, end: selectedDate}]);
+      navigate('/bookingConfirmed');
+    } else {
+      console.log('Please select a date before continuing.');
+    }
   };
 
   return (
@@ -40,6 +47,7 @@ const BookingPage = () => {
             endAccessor="end"
             views={['month', 'agenda']}
             style={{ height: 500 }}
+            onSelectSlot={handleDateSelect}
           />
         </div>
         </div>
@@ -48,6 +56,13 @@ const BookingPage = () => {
           <button onClick={handleContinue} className="continue-button">
             Continue
           </button>
+        </div>
+        <div className='booking-move'>
+          <h2>Booking</h2>
+        </div>
+        <div className='p-move'>
+          <p>Bovi is one of the leading comedian in Nigeria <br/>
+           that has served the country for over 20 years.</p>
         </div>
       </div>
     </>
