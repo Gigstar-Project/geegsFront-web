@@ -23,20 +23,25 @@ const VerificationPage = () => {
   return (
     <><Navbar />
     <div className='all-container'>
-      <div className="wrapper">
-        <h2>Verification Code</h2>
-        <div className='input-container'>
-          <p>Enter the code sent to your email:</p>
-          <input
-            type="text"
-            value={verificationCode}
-            onChange={(e) => setVerificationCode(e.target.value)} />
-        </div>
-        <div className='button-wrapper'>
-          <button onClick={handleContinue} className='veri-continue'>Continue</button>
-        </div>
+        <div className='inner-box2'>
+    <div className="wrapper">
+      <h2 className='verification-header'>Verification Code</h2>
+      <div className='input-container'>
+      <p className='guide-text'>Enter the code sent to your email:</p>
+      <input
+        type="text"
+        value={verificationCode}
+        onChange={(e) => setVerificationCode(e.target.value)}
+        className='code-input'
+      />
       </div>
-    </div></>
+      <div className='button-wrapper'>
+      <button onClick={handleContinue}>Continue</button>
+      </div>
+      </div>
+        </div>
+    </div>
+    </>
   );
 };
 

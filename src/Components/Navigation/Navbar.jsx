@@ -20,7 +20,7 @@ const Navbar = () => {
       <button className='login-button'>Login</button>
        </div>
       );
-    } else {
+    } else if(location.pathname !== '/verification') {
       // Other Pages - Display the "Home" and "Logout" buttons
       return (
         <> 

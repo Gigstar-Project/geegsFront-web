@@ -40,7 +40,7 @@ const LoginPage = () => {
                     <p>You are now logged in.</p>
                 </div>
             ) : (
-                <div style={{ textAlign: 'center', border: '1px solid #ccc', padding: '20px', borderRadius: '8px' }}>
+                <div style={{ textAlign: 'center', border: '1px solid #ccc', padding: '20px', borderRadius: '8px', backgroundColor: '#36454f' }}>
                     <h1>Login</h1>
                     <form>
                         <label>

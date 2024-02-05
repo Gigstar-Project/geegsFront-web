@@ -24,7 +24,7 @@ const BookingPage = () => {
   const handleContinue = () => {
     if (selectedDate) {
       setEvents([...events, {title: 'Talent Booked', start: selectedDate, end: selectedDate}]);
-      navigate('/bookingConfirmed');
+      navigate('/eventDetails');
     } else {
       console.log('Please select a date before continuing.');
     }

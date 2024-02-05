@@ -4,10 +4,35 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
   }
+  
+  .header {
+    margin-right: 900px;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 50%;
+  }
+  
+  .logo-wrapper {
+    margin-right: 30%; 
+  }
+  
+  .top-bar {
+    display: flex;
+    margin-left: 10px; 
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    background-color: rosybrown;
+    border-radius: 20px;
+  }
 
   button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #5e93ee;
   }
   
   .welcome-container {
@@ -15,6 +40,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+  }
+  .inner-box{
+    background-color: #36454f;
+    width: 900px;
+    height: 800px;
+    border-radius: 15px;
   }
   
   h1 {
@@ -23,11 +55,17 @@ body {
   }
   
   .move-welcome {
-    margin-left: 1%; 
+    /*margin-left: 1%; */
+    display: flex;
+    justify-content: center;
+
   }
   
   .input-section {
-    font-size: 2.1rem;
+    font-size: 26px;
+    width: 500px;
+    margin-left: 40px;
+    /*margin-top: -20px;*/
   }
   
   input {
@@ -38,90 +76,56 @@ body {
     box-sizing: border-box;
     border-radius: 15px;
   }
+  .input-field{
+    margin-top: 10px;
+  }
   
   .role-selection {
     margin-top: 20px; 
     font-size: 1.8rem;
+    margin-left: 40px;
+    /*margin-right: 530px;*/
   }
   
   .move-select-role {
-    bottom: 15%;
+    margin: auto;
   }
   
   .role-text-container {
     color: #fff;
+    margin:auto;
   }
 
   .already-text {
     color: #fff;
   }
 
-  .move-planner button {
-  background-color: #fff;
-  color: black;
-  padding: 15px 60px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration: 0.4s;
-}
+  .move-talent {
+    position: relative;
+    margin-left: 21%;
+  }
+  
+  .move-planner {
+    position: relative;
+    margin-left: 20%;
+  }
 
-.move-talent button {
-  background-color: #fff;
-  color: black;
-  padding: 15px 66px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration: 0.4s;
-}
-
-.move-planner button:hover,
-.move-talent button:hover {
-  background-color: #fff; /* Set the hover background color */
-  color: #913906; /* Set the hover text color */
-}
-
-/* Styles for the selected role buttons */
-.move-planner button.selected,
-.move-talent button.selected {
-  background-color: #fff;
-}
   p {
     font-size: 1.5rem;
   }
   
   .login-section {
     margin-top: 20px; 
-  }
-  
-  .move-continue {
-    margin-bottom: 60%; 
-    padding-left: 0%;
-    padding-right: 5%;
-  }
-
-  .continue-button {
-    background-color:  #913906;
-    color: #fff;
-    border-radius: 15px;
+    padding-left: 5%;
   }
 
   .login-link {
-    color:  #913906;
+    color:chocolate
   }
-  @media screen and (max-width: 768px) {
-    .welcome-container {
-      padding: 10px; /* Adjust the padding for smaller screens */
-    }
-   
-    
+  
+  .move-continue {
+    /* margin-bottom: 2%;  */
+    padding-left: 40%;
+    padding-right: 3%;
   }
+  
