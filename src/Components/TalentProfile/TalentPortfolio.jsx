@@ -1,7 +1,7 @@
 import React from 'react';
 import Talent from './Talent';
 import './TalentPortfolio.css';
-import logo from '../../Components/Assets/GeegstarLogo.svg'
+import Navbar from '../Navigation/Navbar';
 
 const TalentPortfolio = () => {
   const talents = [
@@ -19,24 +19,15 @@ const TalentPortfolio = () => {
   };
 
   return (
+    <><Navbar />
     <div className="talent-portfolio">
-      <header className="header">
-        <div className='logo-wrapper'>
-        <img src={logo} alt="Logo" className="logo" />
-        </div>
-        <div className="top-bar">
-          <button className="top-button">Home</button>
-          <button className="top-button2">Logout</button>
-        </div>
-      </header>
       {talents.map((talent, index) => (
         <Talent
           key={index}
           {...talent}
-          onEdit={() => handleEditProfile(talent.name)}
-        />
+          onEdit={() => handleEditProfile(talent.name)} />
       ))}
-    </div>
+    </div></>
   );
 };
 

@@ -1,5 +1,6 @@
-import React, { useState, useHistory } from 'react';
-import AppLogo from '../Assets/GeegstarLogo.svg';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navigation/Navbar';
 import Logo from '../Assets/burnaaa2 1.png';
 import talent1 from '../Assets/Rectangle 17.png';
 import talent2 from '../Assets/davido.png';
@@ -8,9 +9,10 @@ import talent4 from '../Assets/Bovi.png';
 
 const PlannerDashboard = () => {
     const [ShowAll, toggleText] = useState(false);
+    const navigate = useNavigate();
 
     const handleLogout = () => {
-        // Implement logout logic
+    
     };
 
     const onClick = () => {
@@ -23,13 +25,13 @@ const PlannerDashboard = () => {
         try {
             console.log('Sending booking request for talentId:', talentId);
 
-            const response = await fetch('http://localhost:8080/api/v1/booking', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ talentId }),
-            });
+             const response = await fetch('http://localhost:8080/api/v1/booking', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ talentId }),
+        });
 
             console.log('Booking response:', response);
 
@@ -42,20 +44,16 @@ const PlannerDashboard = () => {
 
             console.log('Booking successful:', responseData);
 
+            navigate('/booking');
+
             // Additional actions after successful booking can be added here
         } catch (error) {
             console.error('Booking failed:', error);
         }
     };
-
     return (
+        <><Navbar />
         <div style={{ backgroundColor: 'black', maxWidth: '100%', color: 'white' }}>
-            <img src={AppLogo} alt="App Logo" style={{ width: '200px', height: '100px', top: '10px', left: '50px' }} />
-            <div>
-                <button style={{ position: 'absolute', marginTop: '-80px', right: '50px' }} onClick={handleLogout}>
-                    Logout
-                </button>
-            </div>
             <img src={Logo} alt={Logo} style={{ width: '100%', height: '100%', top: '120em' }} />
             <p style={{ fontSize: '50px', top: '10px', color: 'white' }}>Talents</p>
             <div
@@ -94,20 +92,20 @@ const PlannerDashboard = () => {
                             <h2>BasketMouth</h2>
                             <h1 style={{ color: '#BE9694', fontSize: 16 }}> Comedian</h1>
                         </div>
-                        <p style={{ color: 'white' }}>
-                            BasketMouth is one of the leading comedians in Nigeria that has served the country for
-                            over 20 years.
-                        </p>
-                        <button
-                            onClick={() => handleBookTalent(1)}
-                            style={{
-                                width: '10em',
-                                height: '40px',
-                                background: 'white',
-                                borderRadius: 10,
-                                justifyContent: 'center',
-                            }}
-                        >
+                        <p style={{ color: 'white' }}>BasketMouth is one of the leading comedian
+                            in Nigeria that has served the country for over 20 years.</p>
+                        <button onClick={() => handleBookTalent({
+                            name: 'BasketMouth',
+                            category: 'Comedian',
+                            image: talent1,
+                            description: "BasketMouth is one of the leading comedians in Nigeria that has served the country for over 20 years.",
+                        })} style={{
+                            width: '10em',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10,
+                            justifyContent: 'center'
+                        }}>
                             Book Talents
                         </button>
                     </div>
@@ -131,93 +129,68 @@ const PlannerDashboard = () => {
                     >
                         <img src={talent2} alt={talent2} />
                         <h2>Davido</h2>
-                        <h1 style={{ color: '#BE9694', fontSize: 16 }}> Artist</h1>
-                        <p style={{ color: 'white' }}>
-                            Davido is one of the leading comedians in Nigeria that has served the country for over
-                            20 years.
-                        </p>
-                        <button
-                            onClick={() => handleBookTalent(2)}
-                            style={{
-                                width: '10em',
-                                height: '40px',
-                                background: 'white',
-                                borderRadius: 10,
-                            }}
-                        >
-                            Book Talents
+                        <h1 style={{
+                            color: '#BE9694',
+                            fontSize: 16,
+                        }}> Artist</h1>
+                        <p style={{ color: 'white' }}>Davido is one of the leading comedian in Nigeria that
+                            has served the country for over 20 years.</p>
+                        <button onClick={onClick} style={{
+                            width: '10em',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10
+                        }}>Book Talents
                         </button>
                     </div>
                 </div>
-                <div
-                    style={{
-                        width: '40%',
-                        marginRight: '30px',
-                        height: '100%',
-                        background: '#2B2525',
-                        borderRadius: 32,
-                        alignItems: 'center',
-                    }}
-                >
-                    <div
-                        className="card-text"
-                        style={{
-                            marginTop: '20px',
-                            marginLeft: '30px',
-                        }}
-                    >
+                <div style={{
+                    width: '40%',
+                    marginRight: '30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems: "center"
+                }}>
+                    <div className="card-text" style={{
+                        marginTop: '20px',
+                        marginLeft: '30px'
+                    }}>
                         <img src={talent3} alt={talent3} />
                         <h2>Burna Boy</h2> <h1 style={{ color: '#BE9694', fontSize: 16 }}> Artist</h1>
-                        <p style={{ color: 'white' }}>
-                            Burna Boy is one of the leading comedians in Nigeria that has served the country for over
-                            20 years.
-                        </p>
-                        <button
-                            onClick={() => handleBookTalent(3)}
-                            style={{
-                                width: '10em',
-                                height: '40px',
-                                background: 'white',
-                                borderRadius: 10,
-                            }}
-                        >
-                            Book Talents
+                        <p style={{ color: 'white' }}>Burna Boy is one of the leading comedian in Nigeria that
+                            has served the country for over 20 years.</p>
+                        <button onClick={onClick} style={{
+                            width: '10em',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10
+                        }}>Book Talents
                         </button>
                     </div>
                 </div>
-                <div
-                    style={{
-                        width: '40%',
-                        marginRight: '30px',
-                        height: '100%',
-                        background: '#2B2525',
-                        borderRadius: 32,
-                        alignItems: 'center',
-                    }}
-                >
-                    <div
-                        className="card-text"
-                        style={{
-                            marginTop: '20px',
-                            marginLeft: '30px',
-                        }}
-                    >
+                <div style={{
+                    width: '40%',
+                    marginRight: '30px',
+                    height: '100%',
+                    background: '#2B2525',
+                    borderRadius: 32,
+                    alignItems: "center"
+                }}>
+                    <div className="card-text" style={{
+                        marginTop: '20px',
+                        marginLeft: '30px'
+                    }}>
                         <img src={talent4} alt={talent4} />
                         <h2>Bovi</h2> <h1 style={{ color: '#BE9694', fontSize: 16 }}> Comedian</h1>
-                        <p style={{ color: 'white' }}>
-                            Bovi is one of the leading comedians in Nigeria that has served the country for over
-                            20 years.
-                        </p>
-                        <button
-                            onClick={() => handleBookTalent(4)}
-                            style={{
-                                width: '10em',
-                                height: '40px',
-                                background: 'white',
-                                borderRadius: 10,
-                            }}
-                        >
-                            Book Talents
+                        <p style={{ color: 'white' }}>Bovi is one of the leading comedian in Nigeria that
+                            has served the country for over 20 years.</p>
+                        <button onClick={onClick} style={{
+                            width: '10em',
+                            height: '40px',
+                            background: 'white',
+                            borderRadius: 10
+                        }}>Book Talents
                         </button>
                     </div>
                 </div>
@@ -593,8 +566,7 @@ const PlannerDashboard = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div></>
     );
-};
-
+}
 export default PlannerDashboard;
