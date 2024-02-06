@@ -27,23 +27,26 @@ const VerificationPage = () => {
         <img src={logo} alt="Logo" className="logo" />
         </div>
         <div className="top-bar">
-          <button className="top-button2">Login</button>
+          {/*<button className="top-button2">Login</button>*/}
         </div>
       </header>
+        <div className='inner-box2'>
     <div className="wrapper">
-      <h2>Verification Code</h2>
+      <h2 className='verification-header'>Verification Code</h2>
       <div className='input-container'>
-      <p>Enter the code sent to your email:</p>
+      <p className='guide-text'>Enter the code sent to your email:</p>
       <input
         type="text"
         value={verificationCode}
         onChange={(e) => setVerificationCode(e.target.value)}
+        className='code-input'
       />
       </div>
       <div className='button-wrapper'>
       <button onClick={handleContinue}>Continue</button>
       </div>
       </div>
+        </div>
     </div>
   );
 };

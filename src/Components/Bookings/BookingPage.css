@@ -74,9 +74,8 @@ h2 {
 /* Additional styles for the calendar */
 .rbc-calendar {
     height: 500px;
-    margin: 0;
-    width: 1000;
-    margin-top: 0px;
+    width: 1000px;
+    margin: 0 0 0;
     background-color: black;
     border: 1px solid;
 }
@@ -88,7 +87,7 @@ h2 {
 /* Styles for the logo and buttons */
 .logo {
     height: 50px;
-    margin-left: 0px;
+    margin-left: 0;
     /* margin-right: 0px; */
     padding: 10px;
     justify-content: flex-start;
@@ -98,11 +97,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px;
+    padding: 0;
     background-color: #000;
     position: absolute;
     width: 85%;
-    margin-left: 0%;
+    margin-left: 0;
     top: 0;
     z-index: 1000;
 }
