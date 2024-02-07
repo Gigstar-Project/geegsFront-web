@@ -32,8 +32,7 @@ body {
   }
 
   button:hover {
-    /*background-color: #5e93ee;*/
-    cursor: pointer;
+    background-color: #5e93ee;
   }
   
   .welcome-container {
@@ -103,12 +102,12 @@ body {
 
   .move-talent {
     position: relative;
-    margin-left: 5%;
+    margin-left: 21%;
   }
   
   .move-planner {
     position: relative;
-    margin-left: 5%;
+    margin-left: 20%;
   }
 
   p {
@@ -116,26 +115,17 @@ body {
   }
   
   .login-section {
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    margin-top: 30px;
-    margin-left: 240px;
+    margin-top: 20px; 
+    padding-left: 5%;
   }
-  .selected{
-    background-color: #5e93ee;
-    width: 150px;
+
+  .login-link {
+    color:chocolate
   }
-  .unselected{
-    background-color: white;
-    width: 150px;
-  }
-  .continue-button{
-    width: 350px;
-    height: 70px;
-    border-radius: 7px;
-    color:black;
-    font-weight: bold;
-    margin-left: 200px;
-    margin-top: auto;
+  
+  .move-continue {
+    /* margin-bottom: 2%;  */
+    padding-left: 40%;
+    padding-right: 3%;
   }
   

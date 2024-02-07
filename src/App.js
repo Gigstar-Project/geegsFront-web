@@ -6,10 +6,14 @@ import Register from './Components/Register/Register.jsx';
 
 import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboard.jsx'
 import LoginAccount from '../src/Components/LoginAccount/LoginAccount.jsx'
-import BookingPage from '../src/Components/Bookings/BookingPage.jsx'
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
-// import Login from './Components/LoginAccount/LoginAccount.jsx';
+import BookingConfirmed from './Components/BookingConfirmed/BookingConfirmed.jsx';
+import BookingPage from './Components/Bookings/BookingPage.jsx';
+import Billing from './Components/Billing/BillingScreen.jsx';
+import PlannerBookingDetails from "./Components/PlannerBookingDetails/PlannerBookingDetails.jsx";
+import PlannerBookingBill from "./Components/PlannerBooking Bill/PlannerBookingBill.jsx";
+
 
 const App = () => {
     return (
@@ -24,6 +28,10 @@ const App = () => {
                 <Route path='/talentPortfolio' element={<TalentPortfolio/>}/>
                 <Route path='/eventDetails' element={<EventDetails/>}/>
                 <Route path='/Booking' element={<BookingPage/>}/>
+                <Route path='/bookingConfirmed' element={<BookingConfirmed/>}/>
+                <Route path='/billing' element={<Billing/>}/>
+                <Route path={'/PlannerBooking'} element={<PlannerBookingDetails/>}/>
+                <Route path={'/plannerBill'} element={<PlannerBookingBill/>}/>
             </Routes>
         </Router>
     );

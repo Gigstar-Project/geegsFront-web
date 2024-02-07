@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../Navigation/Navbar';
 import './Register.css';
-import logo from '../../Components/Assets/GeegstarLogo.svg';
 
 const Register = () => {
   const navigate = useNavigate();
-  const [action, setAction] = useState('Register');
   const [successful, setSuccessful] = useState('');
   const [errors, setErrors] = useState({
     phoneNumber: '',
@@ -73,6 +72,12 @@ const Register = () => {
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) {
+        console.error('Error:', response.status, response.statusText);
+        // Handle error accordingly
+        return;
+      }
+
       const responseData = await response.json();
 
       if (response.ok) {
@@ -88,79 +93,69 @@ const Register = () => {
   };
 
   return (
-      <div style={pageStyle} className='container'>
-        <div className='header'>
-          <img src={logo} alt='Logo' className='logo' />
-
-
+      <>
+        <Navbar />
+        <div style={pageStyle} className='container'>
+          <div className='inner-box3'>
+            <div className='text'>Register</div>
+            <hr style={{ width: "100px" }} />
+            <div className='inputs'>
+              <div className='input'>
+                <input
+                    type='text'
+                    placeholder='First Name'
+                    name='firstName'
+                    value={formData.firstName}
+                    onChange={handleInputChange} />
+                {errors.firstName && <p className='error'>{errors.firstName}</p>}
+              </div>
+              <div className='input'>
+                <input
+                    type='text'
+                    placeholder='Last Name'
+                    name='lastName'
+                    value={formData.lastName}
+                    onChange={handleInputChange} />
+                {errors.lastName && <p className='error'>{errors.lastName}</p>}
+              </div>
+              <div className='input'>
+                <input
+                    type='tel'
+                    placeholder='Phone Number'
+                    name='phoneNumber'
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange} />
+                {errors.phoneNumber && <p className='error'>{errors.phoneNumber}</p>}
+              </div>
+              <div className='input'>
+                <input
+                    type='password'
+                    placeholder='Password'
+                    name='password'
+                    value={formData.password}
+                    onChange={handleInputChange} />
+                {errors.password && <p className='error'>{errors.password}</p>}
+              </div>
+              <div className='input'>
+                <input
+                    type='text'
+                    placeholder='Display Name'
+                    name='displayName'
+                    value={formData.displayName}
+                    onChange={handleInputChange} />
+                {errors.displayName && <p className='error'>{errors.displayName}</p>}
+              </div>
+            </div>
+            <div className='submit-container'>
+              <button className='submit' onClick={handleRegister}>
+                Register
+              </button>
+              {successful && <p>{successful}</p>}
+            </div>
+          </div>
         </div>
-
-        <div className='inner-box3'>
-
-        <div className='text'>{action}</div>
-          {/*<hr style={{width: "100px"}}/ >*/}
-        <div className='inputs'>
-          <div className='input'>
-            <input
-                type='text'
-                placeholder='First Name'
-                name='firstName'
-                value={formData.firstName}
-                onChange={handleInputChange}
-            />
-          </div>
-          {successful && <p>{successful}</p>}
-          {errors.firstName && <p className='error'>{errors.firstName}</p>}
-          <div className='input'>
-            <input
-                type='text'
-                placeholder='Last Name'
-                name='lastName'
-                value={formData.lastName}
-                onChange={handleInputChange}
-            />
-          </div>
-          {errors.lastName && <p className='error'>{errors.lastName}</p>}
-          <div className='input'>
-            <input
-                type='tel'
-                placeholder='Phone Number'
-                name='phoneNumber'
-                value={formData.phoneNumber}
-                onChange={handleInputChange}
-            />
-            {errors.phoneNumber && <p className='error'>{errors.phoneNumber}</p>}
-          </div>
-          <div className='input'>
-            <input
-                type='password'
-                placeholder='Password'
-                name='password'
-                value={formData.password}
-                onChange={handleInputChange}
-            />
-          </div>
-          {errors.password && <p className='error'>{errors.password}</p>}
-          <div className='input'>
-            <input
-                type='text'
-                placeholder='Display Name'
-                name='displayName'
-                value={formData.displayName}
-                onChange={handleInputChange}
-            />
-          </div>
-          {errors.displayName && <p className='error'>{errors.displayName}</p>}
-        </div>
-        <div className='submit-container'>
-          <button className={action === 'Login' ? 'submit gray' : 'submit'} onClick={handleRegister}>
-            Register
-          </button>
-        </div>
-          {/*</hr>*/}
-        </div>
-      </div>
-
-      )
+      </>
+  );
 };
+
 export default Register;

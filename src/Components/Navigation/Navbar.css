@@ -1,0 +1,104 @@
+/* Navbar.css */
+
+/* Styles for the navbar container */
+.navbar {
+  background-color: #000;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles for the logo */
+.logo {
+  width: 200px;
+}
+
+/* Styles for the navigation links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+/* Styles for the buttons */
+.login-button {
+  background-color: #913906;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.style-logout {
+  background-color: #913906;
+  color: white;
+  border-radius: 15px;
+}
+
+.style-home {
+  background-color: #913906;
+  color: white;
+  border-radius: 15px;
+}
+
+.move-login-button {
+  position: absolute;
+  left: 95%;
+  top: 10px;
+}
+
+.move-bar {
+  position: absolute;
+  left: 90em;
+  top: 5px;
+}
+
+.move-bar2 {
+  position: absolute;
+  left: 100em;
+  top: 5px;
+}
+
+/* Hover effect on buttons */
+.login-button:hover,
+.nav-link:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-link,
+  .login-button {
+    margin: 5px 0;
+    text-align: center; /* Center text for smaller screens */
+    width: 100%; /* Make buttons full-width for smaller screens */
+  }
+
+  .move-login-button {
+    position: static; /* Reset position for smaller screens */
+    margin-top: 10px; /* Adjust margin for smaller screens */
+    left: 10px; 
+  }
+
+  .move-bar,
+  .move-bar2 {
+    display: flex; /* Show move-bars for smaller screens */
+    position: absolute; /* Reset position for smaller screens */
+    margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+}

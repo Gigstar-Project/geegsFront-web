@@ -1,22 +1,18 @@
-/* BookingPage.css */
-body {
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    font-family: 'Arial', sans-serif; /* Adjust the font-family as needed */
-  }
-
-/* Styles for the outer container */
 .booking-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 100px;
-}
+   width: 100%;
+   margin-top: -130vh;
+   /* border: 2px solid red; */
+  }
+  
+  .talent-image-container {
+   flex:1;
+   /* margin-bottom: 180px; */
 
-/* Styles for the image section */
-.image-section {
-    flex: 1;
+  }
+  .booking-container .wrapper{
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -105,13 +101,69 @@ h2 {
     top: 0;
     z-index: 1000;
 }
+    /* border: 2px solid green; */
+    /*margin: auto{*/
+    /*gap: 15px;*/
+  /*}*/
+  
+   .talent-image {
+    width: 80%;
+    border-radius: 5px;
+  }
 
-.top-buttons {
-    display: flex;
-}
+  .move-calender{
+    flex: 1;
+    
+  }
 
-.top-button,
-.top-button2 {
-    margin-left: 10px;
-    /* Add additional styling as needed */
-}
+  h2 {
+    color: #fff
+  }
+
+  .booking-move {
+    position: absolute;
+    bottom: 100%;
+    left: 60%;
+  }
+   
+  .p-move {
+    position: absolute;
+    bottom: 32%;
+    left: 20%
+  }
+
+  p {
+    color: #fff;
+  }
+ 
+  /* .calendar-container {
+    width: 300%;
+    height: 200%;
+  } */
+  
+  .continue-button-container {
+    text-align: center;
+    margin-left: 113vh;
+    margin-bottom: 30vh;
+    /* width: 20%;
+    text-align: center;
+    bottom: 745px;
+    left: 900px; */
+  }
+  
+  .continue-button {
+    background-color: #913906;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition-duration: 0.4s;
+  }
+  
+  .continue-button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+   

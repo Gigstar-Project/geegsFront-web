@@ -1,10 +1,10 @@
 import React from 'react';
 import './Talent.css'; // Import the CSS file
 import profilePicUrl from '../../Components/Assets/mrfunny.svg';
-import sportify from '../Assets/sportify.svg';
-import youtube from '../Assets/youtube.svg';
-import apple from '../Assets/apple.svg';
-import audiomack from '../Assets/audiomack.svg';
+// import sportify from '../Assets/sportify.svg';
+// import youtube from '../Assets/youtube.svg';
+// import apple from '../Assets/apple.svg';
+// import audiomack from '../Assets/audiomack.svg';
 import eldorado from '../Assets/eldorado.svg';
 import nini from '../Assets/nini.svg';
 import sydney from '../Assets/sydney.svg'; 
@@ -12,7 +12,9 @@ import sydney from '../Assets/sydney.svg';
 const Talent = ({ name, description, onEdit }) => {
   return (
     <div className="talent-container">
+      <div className='move-profile-pic'>
       <img src={profilePicUrl} alt={`${name}'s Profile`} className="profile-pic" />
+      </div>
       <div className='profile-container'>
         <div className='move-name'>
         <div className='name-container'>
@@ -22,11 +24,11 @@ const Talent = ({ name, description, onEdit }) => {
       <div className='move-description'>
       <p>{description}</p>
       </div>
-      <div className='move-button'>
+      {/* <div className='move-button'>
       <div className='edit-button-container'>
-      <button onClick={onEdit}>Edit Profile</button>
+      <button onClick={onEdit} className='style-edit-profile'>Edit Profile</button>
       </div>
-      </div>
+      </div> */}
       <div className='manage-bookings-container'>
           <h2>Manage Bookings</h2>
         </div>
@@ -44,15 +46,15 @@ const Talent = ({ name, description, onEdit }) => {
         <div className='planner-container'>
           <p className='planner-para'>Planner</p>
         </div>
-        <div className='show-all-container'>
+        {/* <div className='show-all-container'>
           <p>Show All</p>
-        </div>
-        <div className='eldorado-reschedule-button'>
+        </div> */}
+        {/* <div className='eldorado-reschedule-button'>
           <button className='reschedule-button'>Reschedule Booking</button>
-        </div>
-        <div className='eldorado-contact-button'>
+        </div> */}
+        {/* <div className='eldorado-contact-button'>
           <button className='contact-button'>Contact Planner</button>
-        </div>
+        </div> */}
         </div>
         </div>
         <div className='move-border2'>
@@ -69,15 +71,15 @@ const Talent = ({ name, description, onEdit }) => {
         <div className='planner-container2'>
           <p className='planner-para2'>Planner</p>
         </div>
-        <div className='show-all-container2'>
+        {/* <div className='show-all-container2'>
           <p>Show All</p>
-        </div>
-        <div className='nini-accept-button'>
+        </div> */}
+        {/* <div className='nini-accept-button'>
           <button className='reschedule-button2'>Accept Booking</button>
-        </div>
-        <div className='nini-contact-button'>
+        </div> */}
+        {/* <div className='nini-contact-button'>
           <button className='contact-button2'>Contact Planner</button>
-        </div>
+        </div> */}
         </div>
         </div>
         <div className='move-border3'>
@@ -94,21 +96,21 @@ const Talent = ({ name, description, onEdit }) => {
         <div className='comedian-container'>
           <p className='comedian-para'>Comedian</p>
         </div>
-        <div className='show-all-container3'>
+        {/* <div className='show-all-container3'>
           <p>Show All</p>
-        </div>
-        <div className='sydney-accept-button'>
+        </div> */}
+        {/* <div className='sydney-accept-button'>
           <button className='reschedule-button3'>Accept Booking</button>
-        </div>
-        <div className='sydney-contact-button'>
+        </div> */}
+        {/* <div className='sydney-contact-button'>
           <button className='contact-button3'>Decline Planner</button>
-        </div>
+        </div> */}
         </div>
         </div>
       <div className='top-right-container'>
       <div className='border-portfolio-container'>
       <div className='portfolio-container'>
-      <h2><u>Portfolio</u></h2>
+      {/* <h2><u>Portfolio</u></h2>
       <div className="image-container">
     <img src={sportify} alt="Sportify" className="sportify" />
     <p className="overlay-text">sportify.com/mrfunny</p>
@@ -124,7 +126,7 @@ const Talent = ({ name, description, onEdit }) => {
     <div className="image-container4">
     <img src={audiomack} alt="Audiomack" className="audiomack" />
     <p className="overlay-text4">audiomack.com/mrfunny</p>
-    </div>
+    </div> */}
     </div>
     </div>
     </div>
