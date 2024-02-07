@@ -13,6 +13,11 @@ body {
     margin: auto;
     height: 100vh;
   }
+
+  .move-profile-pic {
+    position: absolute;
+    left: 43%
+  }
   
   .profile-pic {
     width: 250px; 
@@ -32,7 +37,10 @@ body {
   }
 
   .name-container {
-    margin-bottom: 0px;
+    position: absolute;
+    left: 44%;
+    bottom: 61%;
+    
   }
 
   p {
@@ -46,37 +54,52 @@ body {
     color: #fff;
   }
 
-  .move-name {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-  }
-
-  .move-description{
-    position: absolute;
-    top: 38%;
-    left: 10%;
-  }
-
-  .move-button {
-    position: absolute;
-    top: 40%;
-    left: 11%;
-  }
-
-  .edit-button-container {
-    font-size: 1.5rem;
-    margin-right: 70px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 30px;
-    padding-left: 10px;
+  .style-edit-profile {
+    background-color:  #913906;
+    color: #fff;
+    border-radius: 15px;
   }
 
   .manage-bookings-container {
     position: absolute;
-    top: 53%;
-    right: 75%;
+    top: 44%;
+    right: 76%;
+  }
+
+  .move-border {
+    position: absolute;
+    right: 20%;
+    top: 25%;
+  }
+
+  .border-booking {
+    background-color: #0c8826;
+    border: 1px solid #0c8826; 
+    padding: 50%; 
+    margin-top: 250px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 1472px;
+    border-radius: 15px;
+    padding-right: 15%;
+    height: 13vh;
+    width: 5%;
+  }
+
+  .show-all-container {
+    position: absolute;
+    top: 45%;
+    left: 110%;
+  }
+
+  .accepted-booking-container {
+    position: absolute;
+    top: 36%;
+    left: 5%;
+    font-size: 1.5rem;
+    color: #fff;
   }
 
   .top-right-container {
@@ -85,21 +108,12 @@ body {
     top: 5%;
   }
 
-  button {
-    background-color: rosybrown;
-    font-size: 1.5rem;
-    margin-top: 20px;
-    border-radius: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
   .portfolio-container {
     position: relative;
     height: 50vh;
   }
 
-  .border-portfolio-container {
+  /* .border-portfolio-container {
     
     border: none #1a0404; 
     padding: 10px;
@@ -109,6 +123,10 @@ body {
     border-radius: 30px;
     margin-left: 135%;
     top: 20%;
+  } */
+
+  .edit-button-container {
+   left: 50px;
   }
 
   .image-container {
@@ -118,7 +136,7 @@ body {
     bottom: 5%;
   }
   
-  .sportify {
+  /* .sportify {
     width: 20%; 
     height: 50px;
   }
@@ -192,7 +210,7 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 25px;
-  }
+  } */
 
   .booking-container {
     position: absolute;
@@ -200,111 +218,52 @@ body {
     left: 0px;
   }
 
-  .accepted-booking-container {
-    position: absolute;
-    top: 36%;
-    left: 5%;
-    font-size: 1.5rem;
-    color: #fff;
-  }
-
-  .show-all-container {
-    position: absolute;
-    top: 45%;
-    left: 100%;
-    font-size: 0rem;
-  }
-
-  .eldorado-container {
+  .jazzconcert-container {
     position: absolute;
     top: 46%;
     left: 5%;
   }
 
-  .eldorado-pic {
+  .jazzconcert-pic {
     width: 240px;
   }
 
-  .eldorado-name-container {
+  .jazzconcert-name-container {
     position: absolute;
     top: 83%;
+    right: 79%;
+    color: #fff;
+  }
+
+  .jazzconcert-para {
+    color: #fff;
+  }
+
+  .jazzconcert-para2 {
+    position: absolute;
+    color: #f19696;
+    font-size: 1rem;
+    top: 50%;
+  }
+
+  .view-details-button {
+    position: absolute;
     right: 82%;
     color: #fff;
-  }
-
-  .planner-container {
-    position: absolute;
-    top: 84%;
-    right: 74%
-  }
-
-  .border-booking {
-    background-color: #063510;
-    border: 1px solid #063510; 
-    padding: 50%; 
-    margin-top: 250px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 1470px;
-    border-radius: 20px;
-    padding-right: 9%;
-    height: 13vh;
-    width: 5%;
-  }
-
-  .move-border {
-    position: absolute;
-    right: 14%;
-    top: 34%;
-  }
-
-  .eldorado-reschedule-button {
-    position: absolute;
-    right: 88%;
-    font-size: 1rem;
-    top: 85%;
-  }
-
-  .reschedule-button {
-    padding: 8px 5px; 
-    font-size: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-
-  .eldorado-contact-button {
-    position: absolute;
-    right: 80%;
-    font-size: 1rem;
-    top: 85%;
-  }
-
-  .contact-button {
-    padding: 8px 5px; 
-    font-size: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-
-  .eldorado-para {
-    color: #fff;
-  }
-
-  .planner-para {
-    font-size: 1rem;
+    border-radius: 10px;
+    top: 87%;
+    font-size: 1.2rem;
   }
 
   .move-border2 {
     position: absolute;
-    right: 14%;
-    top: 85%;
+    right: 20%;
+    top: 73%;
   }
 
-  .border-booking2 {
-     background-color: #4b0303cb;
-     border: 1px solid #4b0303cb; /* You can customize the border style, color, and width */
+  .border-booking2 { 
+    background-color: #0a6612cb;
+    border: 1px solid #0a6612cb;
      padding: 50%; 
      margin-top: 250px;
      margin-left: 50px;
@@ -312,8 +271,8 @@ body {
      padding-top: 10%;
      padding-bottom: 10%;
      padding-left: 1470px;
-     border-radius: 20px;
-     padding-right: 9%;
+     border-radius: 15px;
+     padding-right: 15%;
      height: 13vh;
      width: 5%;
    }
@@ -326,90 +285,67 @@ body {
     color: #fff;
   }
 
-  .nini-container {
+  .jazzconcert2-container {
     position: absolute;
     top: 46%;
     left: 5%;
   }
 
-  .nini-pic {
+  .jazzconcert2-pic {
     width: 240px;
   }
   
-  .nini-name-container {
+  .jazzconcert2-name-container {
     position: absolute;
     top: 83%;
-    right: 85%;
+    right: 79%;
     color: #fff;
   }
 
-  .nini-para {
+  .jazzconcert2-para {
     color: #fff;
   }
 
-  .planner-container2 {
+  .jazzconcert2-para2 {
     position: absolute;
-    top: 84%;
-    right: 74%
-  }
-
-  .planner-para2 {
+    color: #f19696;
     font-size: 1rem;
+    top: 50%;
+  }
+  
+  .view-details-button2 {
+    position: absolute;
+    right: 82%;
+    color: #fff;
+    border-radius: 10px;
+    top: 87%;
+    font-size: 1.2rem;
   }
 
-  .show-all-container2 {
+  /* .show-all-container2 {
     position: absolute;
     top: 45%;
-    left: 100%;
-    font-size: 0rem;
-  }
-
-  .nini-accept-button {
-    position: absolute;
-    right: 89%;
-    font-size: 1rem;
-    top: 85%;
-  }
-
-  .reschedule-button2 {
-    padding: 8px 5px; /* Example padding */
-    font-size: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-
-  .nini-contact-button {
-    position: absolute;
-    right: 80%;
-    font-size: 1rem;
-    top: 85%;
-  }
-
-  .contact-button2 {
-    padding: 8px 5px; /* Example padding */
-    font-size: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-  }
+    left: 110%;
+  } */
 
   .move-border3 {
     position: absolute;
-    right: 14%;
-    top: 136%;
+    right: 20%;
+    top: 121%;
   }
 
   .border-booking3 {
-     background-color: #063510;
-     border: 1px solid #063510; /* You can customize the border style, color, and width */
-     padding: 50%; 
+    background-color: #063510;
+    border: 1px solid #063510;
+    padding: 50%; 
      margin-top: 250px;
      margin-left: 50px;
      margin-bottom: 10px;
      padding-top: 10%;
      padding-bottom: 10%;
      padding-left: 1470px;
-     border-radius: 20px;
-     padding-right: 9%;
+     border-radius: 15px;
+     padding-right: 15%;
      height: 13vh;
      width: 5%;
    }
@@ -422,72 +358,222 @@ body {
     color: #fff;
   }
 
-  .sydney-container {
+  .jazzconcert3-container {
     position: absolute;
     top: 46%;
     left: 5%;
   }
 
-  .sydney-pic {
+  .jazzconcert3-pic {
     width: 240px;
   }
   
-  .sydney-name-container {
+  .jazzconcert3-name-container {
     position: absolute;
     top: 83%;
-    right: 83%;
+    right: 79%;
     color: #fff;
   }
 
-  .sydney-para {
+  .jazzconcert3-para {
     color: #fff;
   }
 
-  .comedian-container {
+  .jazzconcert3-para3 {
     position: absolute;
-    top: 84%;
-    right: 74%
-  }
-
-  .comedian-para {
+    color: #f19696;
     font-size: 1rem;
+    top: 50%;
   }
 
-  .show-all-container3 {
+  .view-details-button3 {
+    position: absolute;
+    right: 82%;
+    color: #fff;
+    border-radius: 10px;
+    top: 87%;
+    font-size: 1.2rem;
+  }
+
+  .jazzconcert4-container {
+    position: absolute;
+    top: 46%;
+    left: 5%;
+  }
+
+  .jazzconcert4-pic {
+    width: 240px;
+  }
+  
+  .jazzconcert4-name-container {
+    position: absolute;
+    top: 83%;
+    right: 79%;
+    color: #fff;
+  }
+
+  .jazzconcert4-para {
+    color: #fff;
+  }
+
+  .jazzconcert4-para4 {
+    position: absolute;
+    color: #f19696;
+    font-size: 1rem;
+    top: 50%;
+  }
+
+  .view-details-button4 {
+    position: absolute;
+    right: 82%;
+    color: #fff;
+    border-radius: 10px;
+    top: 87%;
+    font-size: 1.2rem;
+  }
+   
+  .border-booking4 {
+    background-color: #4b0303cb;
+    border: 1px solid #4b0303cb;
+    padding: 50%; 
+     margin-top: 250px;
+     margin-left: 50px;
+     margin-bottom: 10px;
+     padding-top: 10%;
+     padding-bottom: 10%;
+     padding-left: 1470px;
+     border-radius: 15px;
+     padding-right: 15%;
+     height: 13vh;
+     width: 5%;
+   }
+
+   .move-border4 {
+    position: absolute;
+    right: 20%;
+    top: 169%;
+  }
+
+  /* .show-all-container3 {
     position: absolute;
     top: 45%;
-    left: 100%;
-    font-size: 0rem;
-  }
+    left: 110%;
+  } */
 
-  .sydney-accept-button {
+  .move-description {
     position: absolute;
-    right: 89%;
-    font-size: 1rem;
-    top: 85%;
+    left: 47%;
+    bottom: 60%;
   }
 
-  .reschedule-button3 {
-    padding: 8px 5px; /* Example padding */
-    font-size: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-
-  .sydney-contact-button {
+  .move-button {
     position: absolute;
-    right: 80%;
-    font-size: 1rem;
-    top: 85%;
+    left: 46%;
+    bottom: 55%;
   }
 
-  .contact-button3 {
-    padding: 8px 5px; /* Example padding */
-    font-size: 10px;
-    border-radius: 5px;
-    background-color: #fff;
+/*   
+  @media screen and (max-width: 768px) {
+    .move-profile-pic,
+    .move-name,
+    .move-description,
+    .move-button,
+    .name-container {
+      position: static; 
+      left: auto; 
+      top: auto;
+      text-align: center; 
+      margin: 10px 0; 
+    }
+  
+    .move-profile-pic {
+      position: absolute;
+      left: 19%;
+      bottom: 70%;
+    }
+  
+    .move-name {
+    }
+
+    .name-container {
+      position: absolute;
+      left: 24%;
+      top: 23%;
+    }
   }
+  */
 
-  
+  @media screen and (max-width: 768px) {
+    .move-profile-pic,
+    .move-name,
+    .move-border,
+    .move-border2,
+    .move-border3 {
+      position: static;
+      left: auto;
+      top: auto;
+      text-align: center;
+      margin: 10px 0;
+    }
 
-  
+    .move-profile-pic {
+      position: relative;
+      left: 15%;
+      right: auto;
+      margin-bottom: 20px;
+    }
+
+    .name-container {
+      position: absolute;
+      top: 32%;
+      right: 26%;
+      left: 15%;
+    }
+
+    h2{
+      font-size: 1.7rem;
+    }
+    
+    .move-description{
+      position: absolute;
+      left: 30%;
+      top: 36%;
+    }
+
+    .move-border2,
+    .move-border3 {
+      position: static;
+      right: auto;
+      top: auto;
+      margin: 20px 0;
+    }
+    
+    .move-border {
+      position: absolute;
+      top: 30%;
+    }
+    
+    /* .border-booking2,
+    .border-booking3 {
+      padding: 10%;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 15%;
+      padding-right: 15%;
+    } */
+
+    .manage-bookings-container{
+      position: absolute;
+      left: 10%;
+      top: 37%;
+    }
+
+    .border-booking {
+      position: absolute;
+      padding: 15%;
+      top: 50%;
+      height: 50%;
+      width: 50%;
+      right: 20%;
+    }
+  }

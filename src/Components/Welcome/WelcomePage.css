@@ -6,10 +6,7 @@ body {
   }
   
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    margin-right: 900px;
   }
   
   .logo {
@@ -43,6 +40,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+  }
+  .inner-box{
+    background-color: #36454f;
+    width: 900px;
+    height: 800px;
+    border-radius: 15px;
   }
   
   h1 {
@@ -51,11 +55,17 @@ body {
   }
   
   .move-welcome {
-    margin-left: 1%; 
+    /*margin-left: 1%; */
+    display: flex;
+    justify-content: center;
+
   }
   
   .input-section {
-    font-size: 2.1rem;
+    font-size: 26px;
+    width: 500px;
+    margin-left: 40px;
+    /*margin-top: -20px;*/
   }
   
   input {
@@ -66,18 +76,24 @@ body {
     box-sizing: border-box;
     border-radius: 15px;
   }
+  .input-field{
+    margin-top: 10px;
+  }
   
   .role-selection {
     margin-top: 20px; 
     font-size: 1.8rem;
+    margin-left: 40px;
+    /*margin-right: 530px;*/
   }
   
   .move-select-role {
-    bottom: 15%;
+    margin: auto;
   }
   
   .role-text-container {
     color: #fff;
+    margin:auto;
   }
 
   .already-text {
@@ -86,7 +102,7 @@ body {
 
   .move-talent {
     position: relative;
-    margin-left: 23%;
+    margin-left: 21%;
   }
   
   .move-planner {
@@ -100,11 +116,16 @@ body {
   
   .login-section {
     margin-top: 20px; 
+    padding-left: 5%;
+  }
+
+  .login-link {
+    color:chocolate
   }
   
   .move-continue {
-    margin-bottom: 60%; 
-    padding-left: 0%;
+    /* margin-bottom: 2%;  */
+    padding-left: 40%;
     padding-right: 3%;
   }
   

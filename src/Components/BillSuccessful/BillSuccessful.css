@@ -1,0 +1,63 @@
+.booking-confirmed-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    left: 50%; /* Center the container horizontally */
+    bottom: 5%; /* Center the container vertically */
+    transform: translate(-50%, -50%); /* Centering trick */
+  }
+  
+  .confirmation-image {
+    width: 500px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .back-to-home-button {
+    background-color: #913906;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+  }
+  
+  .back-to-home-button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .booking-confirmed-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .confirmation-image {
+    width: 200px; /* Adjust the width for smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .confirmation-text {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .back-to-home-button {
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
