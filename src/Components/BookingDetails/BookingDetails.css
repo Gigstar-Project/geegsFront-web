@@ -1,0 +1,115 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif; 
+  }
+
+  .booking-details-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .border {
+      border: 1px solid #474343;
+      background-color: #493f3f;
+      color: #fff;
+      border-radius: 30px;
+      padding-right: 20%;
+      padding-left: 2%;
+      margin-right: 35%;
+      margin-top: 5%;
+      padding-bottom: 5%;
+  }
+
+  .accept-button.accepted-button {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .booking-declined-text {
+    margin-left: 130%;
+    margin-bottom: 50px;
+  }
+
+  .decline-text {
+    color: red;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .starevent {
+    color: #e6cfcf;
+  }
+
+  .jazz-pic {
+      width: 210%;
+      height: 100%;
+  }
+   
+  .move-accept {
+    position: absolute;
+    left: 33%;
+    top: 60%;
+  }
+
+  .accept-form {
+    display: grid;
+    gap: 10%
+  }
+
+  .cost {
+    border-radius: 15px;
+    padding-left: 5%;
+    font-size: 1.2rem;
+
+  }
+
+  .info {
+    border-radius: 15px;
+    padding-left: 5%;
+    padding-bottom: 20%;
+    color: #000
+  }
+
+  .move-submit {
+    margin-left: 162%;
+  }
+
+  .submit-button {
+    border-radius: 15px;
+    background-color: #0ab419;
+    color: #fff;
+  }
+
+  .move-decline {
+    position: absolute;
+    left: 43%;
+    top: 60%;
+  }
+
+  .accept-button {
+    border-radius: 15px;
+    background-color: #0ab419;
+    color: #fff;
+  }
+
+  .decline-button {
+    border-radius: 15px;
+    background-color: red;
+    color: #fff;
+  }
+
+  .move-jazz {
+    position: absolute;
+    margin-left: 33%;
+    margin-top: 6%;
+  }
+
+
+

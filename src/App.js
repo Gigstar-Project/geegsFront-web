@@ -7,9 +7,9 @@ import PlannerDashboard from '../src/Components/PlannerDashboard/PlannerDashboar
 import TalentPortfolio from './Components/TalentProfile/TalentPortfolio';
 import EventDetails from './Components/EventDetails/EventDetails.jsx';
 import LoginAccount from "./Components/LoginAccount/LoginAccount";
-import BookingConfirmed from './Components/BookingConfirmed/BookingConfirmed.jsx';
+import BillSuccessful from './Components/BillSuccessful/BillSuccessful.jsx';
 import BookingPage from './Components/Bookings/BookingPage.jsx';
-import Billing from './Components/Billing/BillingScreen.jsx';
+import BookingDetails from './Components/BookingDetails/BookingDetails.jsx';
 
 
 const App = () => {
@@ -24,8 +24,8 @@ const App = () => {
                 <Route path='/talentPortfolio' element={<TalentPortfolio />} />
                 <Route path='/eventDetails' element={<EventDetails />} />
                 <Route path='/booking' element={<BookingPage/>}/>
-                <Route path='/bookingConfirmed' element={<BookingConfirmed/>}/>
-                <Route path='/billing' element={<Billing/>}/>
+                <Route path='/billSuccessful' element={<BillSuccessful/>}/>
+                <Route path='/bookingDetails' element={<BookingDetails/>}/>
             </Routes>
         </Router>
     );
