@@ -55,7 +55,7 @@ body {
   .move-accept {
     position: absolute;
     left: 33%;
-    top: 60%;
+    top: 50%;
   }
 
   .accept-form {
@@ -90,7 +90,7 @@ body {
   .move-decline {
     position: absolute;
     left: 43%;
-    top: 60%;
+    top: 50%;
   }
 
   .accept-button {

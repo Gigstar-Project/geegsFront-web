@@ -190,7 +190,7 @@ const PlannerDashboard = () => {
                             height: '40px',
                             background: 'white',
                             borderRadius: 10
-                        }}>Book Talents
+                        }}> <a href="https://">Book Talents</a>
                         </button>
                     </div>
                 </div>
